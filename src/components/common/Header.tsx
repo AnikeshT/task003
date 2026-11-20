@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Flame, Dices, Palette, Volume2, Sparkles, Search, Video, Award } from 'lucide-react';
+import { Search, Volume2, Palette, Dices, ArrowUpRight } from 'lucide-react';
 import { soundFx } from '@/utils/soundEffects';
 
 interface HeaderProps {
@@ -11,7 +11,6 @@ interface HeaderProps {
   onOpenRoulette: () => void;
   onOpenStudio: () => void;
   onOpenSoundboard: () => void;
-  onOpenReels: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -20,51 +19,51 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenRoulette,
   onOpenStudio,
   onOpenSoundboard,
-  onOpenReels,
 }) => {
   return (
-    <header className="sticky top-0 z-40 bg-dark-950/85 backdrop-blur-xl border-b border-dark-800">
+    <header className="sticky top-0 z-40 bg-[#0c0d12]/90 backdrop-blur-xl border-b border-stone-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
-        {/* Brand Logo */}
-        <div className="flex items-center gap-3">
-          <Link
-            href="/"
-            onClick={() => soundFx.pop()}
-            className="flex items-center gap-2.5 group"
-          >
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-dank-green to-dank-purple flex items-center justify-center shadow-lg shadow-dank-green/20 group-hover:scale-105 transition-transform">
-              <span className="text-2xl">🐐</span>
+        {/* Brand Wordmark (Editorial luxury) */}
+        <Link
+          href="/"
+          onClick={() => soundFx.pop()}
+          className="flex items-center gap-3 group"
+        >
+          <div className="w-10 h-10 rounded-2xl bg-stone-900 border border-stone-800 flex items-center justify-center text-xl shadow-md group-hover:border-amber-400/60 transition-colors">
+            <span>🐐</span>
+          </div>
+          <div>
+            <div className="font-serif text-2xl font-light tracking-[0.18em] text-stone-100 uppercase group-hover:text-amber-300 transition-colors">
+              MEME<span className="font-semibold text-amber-400">VAULT</span>
             </div>
-            <div>
-              <div className="font-display font-extrabold text-2xl tracking-tight text-white flex items-center gap-1.5">
-                <span>GOAT</span>
-                <span className="text-dank-green">MEMES</span>
-                <span className="text-[10px] uppercase font-mono tracking-widest px-1.5 py-0.5 rounded bg-dank-purple/20 text-dank-purple border border-dank-purple/30">
-                  Global
-                </span>
-              </div>
-              <div className="text-[10px] font-mono text-slate-400 hidden sm:block">
-                🇮🇳 Desi • 🇪🇺 Euro • 🌍 Worldwide Vault
-              </div>
+            <div className="text-[10px] font-mono tracking-widest text-stone-500 uppercase -mt-1">
+              Haute Internet Culture • 003
             </div>
-          </Link>
-        </div>
+          </div>
+        </Link>
+
+        {/* Navigation Links */}
+        <nav className="hidden lg:flex items-center gap-8 text-xs font-mono tracking-widest uppercase text-stone-400">
+          <a href="#vault-feed" className="hover:text-amber-300 transition-colors">The Vault</a>
+          <a href="#rhythms" className="hover:text-amber-300 transition-colors">Curated Rail</a>
+          <a href="#standard" className="hover:text-amber-300 transition-colors">The Standard</a>
+        </nav>
 
         {/* Global Live Search Bar */}
-        <div className="flex-1 max-w-md hidden md:block">
+        <div className="flex-1 max-w-xs hidden md:block">
           <div className="relative">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-stone-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
-              placeholder="Search Babu Bhaiya, KEKW, GigaChad, Binod..."
-              className="w-full bg-dark-900 border border-dark-700 rounded-full pl-10 pr-4 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-dank-green focus:ring-1 focus:ring-dank-green transition-all"
+              placeholder="Search lore, punchlines..."
+              className="w-full bg-stone-900/80 border border-stone-800 rounded-full pl-10 pr-4 py-2 text-xs text-stone-200 placeholder-stone-500 focus:outline-none focus:border-amber-400 transition-all font-mono"
             />
             {searchQuery && (
               <button
                 onClick={() => onSearchChange('')}
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-white"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-xs text-stone-400 hover:text-white"
               >
                 ✕
               </button>
@@ -72,72 +71,40 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
 
-        {/* Action Controls */}
-        <div className="flex items-center gap-2 sm:gap-3">
-          {/* Soundboard Button */}
+        {/* Right Actions */}
+        <div className="flex items-center gap-2.5">
           <button
             onClick={() => {
               soundFx.airhorn();
               onOpenSoundboard();
             }}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-dark-850 hover:bg-dark-800 border border-dark-700 text-xs font-medium text-slate-200 hover:text-dank-yellow transition-all active:scale-95"
-            title="Open Meme Soundboard"
+            className="p-2.5 rounded-full bg-stone-900 border border-stone-800 hover:border-amber-400/80 text-stone-300 hover:text-amber-300 transition-all active:scale-95 shadow-sm"
+            title="Open Soundboard"
           >
-            <Volume2 className="w-4 h-4 text-dank-yellow" />
-            <span className="hidden sm:inline">Soundboard</span>
+            <Volume2 className="w-4 h-4" />
           </button>
 
-          {/* Reel Mode */}
-          <button
-            onClick={() => {
-              soundFx.phonk();
-              onOpenReels();
-            }}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-dark-850 hover:bg-dark-800 border border-dark-700 text-xs font-medium text-slate-200 hover:text-dank-purple transition-all active:scale-95"
-            title="Watch Fullscreen Clips"
-          >
-            <Video className="w-4 h-4 text-dank-purple" />
-            <span className="hidden sm:inline">Clips</span>
-          </button>
-
-          {/* Meme Generator Studio */}
           <button
             onClick={() => {
               soundFx.pop();
               onOpenStudio();
             }}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-dark-850 hover:bg-dark-800 border border-dark-700 text-xs font-medium text-slate-200 hover:text-dank-green transition-all active:scale-95"
-            title="Open Meme Generator Studio"
+            className="p-2.5 rounded-full bg-stone-900 border border-stone-800 hover:border-amber-400/80 text-stone-300 hover:text-amber-300 transition-all active:scale-95 shadow-sm"
+            title="Meme Studio"
           >
-            <Palette className="w-4 h-4 text-dank-green" />
-            <span className="hidden sm:inline">Studio</span>
+            <Palette className="w-4 h-4" />
           </button>
 
-          {/* Roulette Button (Spicy Random) */}
           <button
             onClick={() => {
               soundFx.vineBoom();
               onOpenRoulette();
             }}
-            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-dank-green to-emerald-500 text-dark-950 font-bold text-xs uppercase tracking-wider hover:brightness-110 shadow-lg shadow-dank-green/20 transition-all active:scale-95"
+            className="px-4 py-2.5 rounded-full bg-amber-400 hover:bg-amber-300 text-stone-950 font-mono text-xs uppercase tracking-widest font-bold shadow-lg shadow-amber-400/20 transition-all active:scale-95 flex items-center gap-1.5"
           >
-            <Dices className="w-4 h-4 animate-spin-slow" />
+            <Dices className="w-3.5 h-3.5" />
             <span>Roulette</span>
           </button>
-        </div>
-      </div>
-
-      {/* Mobile Search Input */}
-      <div className="md:hidden px-4 pb-3">
-        <div className="relative">
-          <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={(e) => onSearchChange(e.target.value)}
-            placeholder="Search memes, countries, characters..."
-            className="w-full bg-dark-900 border border-dark-700 rounded-full pl-10 pr-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-dank-green"
-          />
         </div>
       </div>
     </header>

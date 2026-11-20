@@ -85,7 +85,7 @@ export const RandomMemeDropToast: React.FC = () => {
 
         <div className="flex-1 min-w-0">
           <h4 className="font-display font-bold text-sm text-white truncate">
-            {activeMeme.flag} {activeMeme.title}
+            {activeMeme.title}
           </h4>
           <p className="text-xs text-slate-300 line-clamp-1 italic">
             "{activeMeme.punchline}"

@@ -170,7 +170,7 @@ export const MemeStudioModal: React.FC<MemeStudioModalProps> = ({
                         : 'bg-dark-850 text-slate-300 hover:bg-dark-800'
                     }`}
                   >
-                    {m.flag} {m.title.split(' ')[0]}
+                    {m.title.split(' ')[0]}
                   </button>
                 ))}
               </div>

@@ -4,22 +4,26 @@ import React, { useState } from 'react';
 import { Header } from '@/components/common/Header';
 import { Footer } from '@/components/common/Footer';
 import { DancingCatLoader } from '@/components/common/DancingCatLoader';
-import { HeroMemeBanner } from '@/components/home/HeroMemeBanner';
+import { EditorialHero } from '@/components/home/EditorialHero';
+import { EditorialHorizontalRail } from '@/components/home/EditorialHorizontalRail';
+import { EditorialRhythmGrid } from '@/components/home/EditorialRhythmGrid';
+import { EditorialStandard } from '@/components/home/EditorialStandard';
 import { MemeFeed } from '@/components/home/MemeFeed';
+import { EditorialStarlitQuote } from '@/components/home/EditorialStarlitQuote';
+import { EditorialFaq } from '@/components/home/EditorialFaq';
 import { MemeSoundboard } from '@/components/home/MemeSoundboard';
 import { MemeStudioModal } from '@/components/home/MemeStudioModal';
 import { MemeRouletteModal } from '@/components/home/MemeRouletteModal';
-import { ReelPlayerModal } from '@/components/home/ReelPlayerModal';
 import { RandomMemeDropToast } from '@/components/home/RandomMemeDropToast';
 import { GOAT_MEMES } from '@/data/memes';
 import { MemeItem } from '@/types/meme';
 
 export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [activeVibeFilter, setActiveVibeFilter] = useState('all');
   const [isSoundboardOpen, setIsSoundboardOpen] = useState(false);
   const [isStudioOpen, setIsStudioOpen] = useState(false);
   const [isRouletteOpen, setIsRouletteOpen] = useState(false);
-  const [isReelsOpen, setIsReelsOpen] = useState(false);
   const [selectedStudioMeme, setSelectedStudioMeme] = useState<MemeItem | null>(null);
 
   const handleOpenStudioWithMeme = (meme: MemeItem) => {
@@ -28,8 +32,8 @@ export default function HomePage() {
   };
 
   return (
-    <main className="min-h-screen bg-dark-950 text-slate-100 flex flex-col justify-between selection:bg-dank-green selection:text-black">
-      {/* 1. Dancing Cat Fullscreen Loader & Floating Mascot */}
+    <main className="min-h-screen bg-[#0c0d12] text-stone-100 flex flex-col justify-between selection:bg-amber-400 selection:text-stone-950 font-sans">
+      {/* 1. Dancing Cat Loader & Floating Mascot */}
       <DancingCatLoader />
 
       <div>
@@ -43,11 +47,11 @@ export default function HomePage() {
             setIsStudioOpen(true);
           }}
           onOpenSoundboard={() => setIsSoundboardOpen(true)}
-          onOpenReels={() => setIsReelsOpen(true)}
         />
 
-        {/* Hero Section with Featured Sovereign Smirk GOAT */}
-        <HeroMemeBanner
+        {/* 2. Editorial Hero (Sarab-inspired) with Hrithik Dance & Sovereign Smirk */}
+        <EditorialHero
+          onSearch={setSearchQuery}
           onOpenRoulette={() => setIsRouletteOpen(true)}
           onOpenStudio={() => {
             setSelectedStudioMeme(null);
@@ -56,21 +60,45 @@ export default function HomePage() {
           onOpenSoundboard={() => setIsSoundboardOpen(true)}
         />
 
-        {/* Interactive Meme Stream Feed with Real Meme Images */}
+        {/* 3. Horizontal Curated Rail ("Six memes we'd send to our closest friends") */}
+        <EditorialHorizontalRail
+          memes={GOAT_MEMES}
+          onSelectMeme={handleOpenStudioWithMeme}
+        />
+
+        {/* 4. Choose Your Rhythm Bento Grid (5 comedic categories) */}
+        <EditorialRhythmGrid
+          onSelectVibe={(vibe) => setActiveVibeFilter(vibe)}
+        />
+
+        {/* 5. The Curatorial Standard (Sticky Hrithik Dance + 4 Tenets) */}
+        <EditorialStandard />
+
+        {/* 6. Complete Curated Archive Feed (With Video Iframes & Clean Ratios) */}
         <MemeFeed
           memes={GOAT_MEMES}
           searchQuery={searchQuery}
+          activeVibeFilter={activeVibeFilter}
           onOpenStudioWithMeme={handleOpenStudioWithMeme}
         />
+
+        {/* 7. Late-Night Starlit Breakout Banner */}
+        <EditorialStarlitQuote
+          onOpenRoulette={() => setIsRouletteOpen(true)}
+          onOpenSoundboard={() => setIsSoundboardOpen(true)}
+        />
+
+        {/* 8. Accordion Inquiries & Cultural Lore */}
+        <EditorialFaq />
       </div>
 
       {/* Footer */}
       <Footer />
 
-      {/* 2. Every 10 Seconds Random Meme Drop Toast */}
+      {/* 9. Live 10-Second Random Meme Drop */}
       <RandomMemeDropToast />
 
-      {/* Modals & Tools */}
+      {/* Modals & Interactive Tools */}
       <MemeSoundboard
         isOpen={isSoundboardOpen}
         onClose={() => setIsSoundboardOpen(false)}
@@ -86,11 +114,6 @@ export default function HomePage() {
         isOpen={isRouletteOpen}
         onClose={() => setIsRouletteOpen(false)}
         onOpenStudioWithMeme={handleOpenStudioWithMeme}
-      />
-
-      <ReelPlayerModal
-        isOpen={isReelsOpen}
-        onClose={() => setIsReelsOpen(false)}
       />
     </main>
   );

@@ -1,32 +1,42 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { Flame, Sparkles, Filter, Video, Image as ImageIcon, SlidersHorizontal, ArrowUpDown } from 'lucide-react';
-import { MemeItem, FilterCategory, MemeRegion } from '@/types/meme';
+import { Sparkles, ArrowUpDown, Video, Image as ImageIcon } from 'lucide-react';
+import { MemeItem, MemeVibe } from '@/types/meme';
 import { MemeCard } from './MemeCard';
 import { soundFx } from '@/utils/soundEffects';
 
 interface MemeFeedProps {
   memes: MemeItem[];
   searchQuery: string;
+  activeVibeFilter?: string;
   onOpenStudioWithMeme: (meme: MemeItem) => void;
 }
 
 export const MemeFeed: React.FC<MemeFeedProps> = ({
   memes,
   searchQuery,
+  activeVibeFilter = 'all',
   onOpenStudioWithMeme,
 }) => {
-  const [activeCategory, setActiveCategory] = useState<FilterCategory>('all');
-  const [activeType, setActiveType] = useState<'all' | 'video' | 'image'>('all');
+  const [selectedVibe, setSelectedVibe] = useState<string>(activeVibeFilter);
+  const [activeFormat, setActiveFormat] = useState<'all' | 'video' | 'image'>('all');
   const [sortBy, setSortBy] = useState<'reactions' | 'views' | 'year'>('reactions');
 
-  const filterTabs = [
-    { id: 'all', label: '🌍 All GOATs', icon: '✨' },
-    { id: 'india', label: '🇮🇳 Desi Vault', icon: '🔥' },
-    { id: 'europe', label: '🇪🇺 Euro Banter', icon: '👑' },
-    { id: 'global', label: '🌐 Worldwide Viral', icon: '🚀' },
-    { id: 'trending', label: '⚡ Trending Now', icon: '📈' },
+  // Sync if external filter updates
+  React.useEffect(() => {
+    if (activeVibeFilter && activeVibeFilter !== 'all') {
+      setSelectedVibe(activeVibeFilter);
+    }
+  }, [activeVibeFilter]);
+
+  const vibeChips = [
+    { id: 'all', label: '✦ All Vault (16)', icon: '✨' },
+    { id: 'cinema', label: 'Pure Cinema', icon: '🎬' },
+    { id: 'legend', label: 'All-Time Legends', icon: '👑' },
+    { id: 'relatable', label: 'Grounded Relatable', icon: '🗿' },
+    { id: 'chaos', label: 'Unfiltered Chaos', icon: '🔥' },
+    { id: 'brainrot', label: 'Universal Brainrot', icon: '⚡' },
   ];
 
   const filteredMemes = useMemo(() => {
@@ -38,21 +48,20 @@ export const MemeFeed: React.FC<MemeFeedProps> = ({
           const matchesTitle = meme.title.toLowerCase().includes(q);
           const matchesPunchline = meme.punchline.toLowerCase().includes(q);
           const matchesTags = meme.tags.some((t) => t.toLowerCase().includes(q));
-          const matchesRegion = meme.regionLabel.toLowerCase().includes(q);
-          if (!matchesTitle && !matchesPunchline && !matchesTags && !matchesRegion) {
+          const matchesVibe = meme.vibeLabel.toLowerCase().includes(q);
+          if (!matchesTitle && !matchesPunchline && !matchesTags && !matchesVibe) {
             return false;
           }
         }
 
-        // Category filter
-        if (activeCategory === 'india' && meme.region !== 'india') return false;
-        if (activeCategory === 'europe' && meme.region !== 'europe') return false;
-        if (activeCategory === 'global' && meme.region !== 'global' && meme.region !== 'usa') return false;
-        if (activeCategory === 'trending' && meme.views < 5000000) return false;
+        // Vibe filter
+        if (selectedVibe !== 'all' && meme.vibe !== selectedVibe) {
+          return false;
+        }
 
-        // Type filter
-        if (activeType === 'video' && meme.type !== 'video') return false;
-        if (activeType === 'image' && meme.type !== 'image') return false;
+        // Format filter
+        if (activeFormat === 'video' && !meme.iframeUrl) return false;
+        if (activeFormat === 'image' && meme.iframeUrl) return false;
 
         return true;
       })
@@ -62,54 +71,51 @@ export const MemeFeed: React.FC<MemeFeedProps> = ({
           const totalB = b.reactions.goat + b.reactions.based + b.reactions.dead;
           return totalB - totalA;
         }
-        if (sortBy === 'views') {
-          return b.views - a.views;
-        }
         if (sortBy === 'year') {
           return Number(b.originYear) - Number(a.originYear);
         }
         return 0;
       });
-  }, [memes, searchQuery, activeCategory, activeType, sortBy]);
+  }, [memes, searchQuery, selectedVibe, activeFormat, sortBy]);
 
   return (
-    <section id="meme-feed" className="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-      {/* Category Pills & Controls Header */}
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b border-dark-800">
-        {/* Regions / Tabs */}
+    <section id="vault-feed" className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      {/* Feed Controls Header */}
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-6 border-b border-stone-800">
+        {/* Vibe Tabs */}
         <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none">
-          {filterTabs.map((tab) => (
+          {vibeChips.map((chip) => (
             <button
-              key={tab.id}
+              key={chip.id}
               onClick={() => {
                 soundFx.pop();
-                setActiveCategory(tab.id as FilterCategory);
+                setSelectedVibe(chip.id);
               }}
-              className={`px-4 py-2.5 rounded-2xl text-xs font-mono font-medium whitespace-nowrap transition-all flex items-center gap-1.5 active:scale-95 ${
-                activeCategory === tab.id
-                  ? 'bg-dank-green text-dark-950 font-bold shadow-lg shadow-dank-green/20'
-                  : 'bg-dark-900 border border-dark-800 text-slate-300 hover:text-white hover:border-dark-700'
+              className={`px-4 py-2.5 rounded-full text-xs font-mono whitespace-nowrap transition-all flex items-center gap-1.5 active:scale-95 ${
+                selectedVibe === chip.id
+                  ? 'bg-amber-400 text-stone-950 font-bold shadow-lg shadow-amber-400/20'
+                  : 'bg-stone-900 border border-stone-800 text-stone-300 hover:text-white hover:border-stone-700'
               }`}
             >
-              <span>{tab.icon}</span>
-              <span>{tab.label}</span>
+              <span>{chip.icon}</span>
+              <span>{chip.label}</span>
             </button>
           ))}
         </div>
 
-        {/* Right Controls: Type filter & Sort */}
-        <div className="flex items-center gap-2.5 w-full md:w-auto justify-between md:justify-end">
+        {/* Right Filter & Sort Controls */}
+        <div className="flex items-center gap-3 w-full md:w-auto justify-between md:justify-end">
           {/* Format Toggle */}
-          <div className="bg-dark-900 border border-dark-800 rounded-xl p-1 flex items-center gap-1">
+          <div className="bg-stone-900 border border-stone-800 rounded-full p-1 flex items-center gap-1">
             <button
               onClick={() => {
                 soundFx.pop();
-                setActiveType('all');
+                setActiveFormat('all');
               }}
-              className={`px-2.5 py-1 rounded-lg text-xs font-mono transition-colors ${
-                activeType === 'all'
-                  ? 'bg-dark-800 text-white font-bold'
-                  : 'text-slate-400 hover:text-slate-200'
+              className={`px-3 py-1 rounded-full text-xs font-mono transition-colors ${
+                activeFormat === 'all'
+                  ? 'bg-stone-800 text-white font-bold'
+                  : 'text-stone-400 hover:text-stone-200'
               }`}
             >
               All
@@ -117,12 +123,12 @@ export const MemeFeed: React.FC<MemeFeedProps> = ({
             <button
               onClick={() => {
                 soundFx.pop();
-                setActiveType('video');
+                setActiveFormat('video');
               }}
-              className={`px-2.5 py-1 rounded-lg text-xs font-mono flex items-center gap-1 transition-colors ${
-                activeType === 'video'
-                  ? 'bg-dark-800 text-dank-purple font-bold'
-                  : 'text-slate-400 hover:text-slate-200'
+              className={`px-3 py-1 rounded-full text-xs font-mono flex items-center gap-1 transition-colors ${
+                activeFormat === 'video'
+                  ? 'bg-stone-800 text-amber-300 font-bold'
+                  : 'text-stone-400 hover:text-stone-200'
               }`}
             >
               <Video className="w-3 h-3" />
@@ -131,12 +137,12 @@ export const MemeFeed: React.FC<MemeFeedProps> = ({
             <button
               onClick={() => {
                 soundFx.pop();
-                setActiveType('image');
+                setActiveFormat('image');
               }}
-              className={`px-2.5 py-1 rounded-lg text-xs font-mono flex items-center gap-1 transition-colors ${
-                activeType === 'image'
-                  ? 'bg-dark-800 text-dank-green font-bold'
-                  : 'text-slate-400 hover:text-slate-200'
+              className={`px-3 py-1 rounded-full text-xs font-mono flex items-center gap-1 transition-colors ${
+                activeFormat === 'image'
+                  ? 'bg-stone-800 text-amber-300 font-bold'
+                  : 'text-stone-400 hover:text-stone-200'
               }`}
             >
               <ImageIcon className="w-3 h-3" />
@@ -145,37 +151,34 @@ export const MemeFeed: React.FC<MemeFeedProps> = ({
           </div>
 
           {/* Sort Dropdown */}
-          <div className="flex items-center gap-1 bg-dark-900 border border-dark-800 rounded-xl px-2.5 py-1 text-xs font-mono text-slate-300">
-            <ArrowUpDown className="w-3 h-3 text-slate-400" />
+          <div className="flex items-center gap-1.5 bg-stone-900 border border-stone-800 rounded-full px-3 py-1.5 text-xs font-mono text-stone-300">
+            <ArrowUpDown className="w-3.5 h-3.5 text-amber-400" />
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
-              className="bg-transparent text-slate-300 focus:outline-none cursor-pointer"
+              className="bg-transparent text-stone-300 focus:outline-none cursor-pointer"
             >
-              <option value="reactions" className="bg-dark-900 text-white">Most GOATed</option>
-              <option value="views" className="bg-dark-900 text-white">Most Viewed</option>
-              <option value="year" className="bg-dark-900 text-white">Historical Year</option>
+              <option value="reactions" className="bg-stone-900 text-white">Most GOATed</option>
+              <option value="year" className="bg-stone-900 text-white">Historical Year</option>
             </select>
           </div>
         </div>
       </div>
 
       {/* Feed Status Summary */}
-      <div className="flex items-center justify-between text-xs font-mono text-slate-500">
+      <div className="flex items-center justify-between text-xs font-mono text-stone-500">
         <div>
-          Showing <span className="text-dank-green font-bold">{filteredMemes.length}</span> legendary memes
-          {searchQuery && (
-            <span> matching "{searchQuery}"</span>
-          )}
+          Archive: <span className="text-amber-400 font-bold">{filteredMemes.length}</span> curated artifacts
+          {searchQuery && <span> matching "{searchQuery}"</span>}
         </div>
         <div className="hidden sm:block">
-          Click 🔥, 💀 or 🐐 to react • Press 🔊 for audio cues
+          Click ▶ to open video iframes with sound • Zero downloads required
         </div>
       </div>
 
-      {/* Meme Grid */}
+      {/* Grid of Verified Meme Cards */}
       {filteredMemes.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredMemes.map((meme) => (
             <MemeCard
               key={meme.id}
@@ -185,14 +188,13 @@ export const MemeFeed: React.FC<MemeFeedProps> = ({
           ))}
         </div>
       ) : (
-        /* Empty State */
-        <div className="p-16 text-center space-y-4 bg-dark-900/40 rounded-3xl border border-dark-800">
-          <div className="text-5xl">🗿</div>
-          <h3 className="font-display text-xl font-bold text-white">
-            No Mid Memes Found
+        <div className="p-16 text-center space-y-4 bg-stone-900/30 rounded-3xl border border-stone-800">
+          <div className="text-4xl">🗿</div>
+          <h3 className="font-serif text-2xl text-stone-200">
+            No Artifacts Found
           </h3>
-          <p className="text-slate-400 text-sm max-w-sm mx-auto">
-            Try searching for "Babu Bhaiya", "Binod", "KEKW", "GigaChad", or reset your filters!
+          <p className="text-stone-400 text-sm max-w-sm mx-auto font-light">
+            Try resetting your search query or switching categories.
           </p>
         </div>
       )}

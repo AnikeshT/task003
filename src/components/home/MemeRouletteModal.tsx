@@ -115,7 +115,7 @@ export const MemeRouletteModal: React.FC<MemeRouletteModalProps> = ({
               }`}
             />
             <div className="absolute top-3 left-3 px-2 py-1 rounded-lg bg-dark-950/80 backdrop-blur-md text-xs font-mono text-white">
-              {currentMeme.flag} {currentMeme.regionLabel}
+              {currentMeme.vibeLabel}
             </div>
           </div>
 
