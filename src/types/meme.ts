@@ -26,7 +26,7 @@ export interface MemeItem {
   commentsCount: number;
   originYear: number | string;
   lore: string;
-  audioEffect?: 'vine-boom' | 'bruh' | 'emotional-damage' | 'airhorn' | 'phonk' | 'sad-violin';
+  audioEffect?: 'vine-boom' | 'bruh' | 'emotional-damage' | 'airhorn' | 'phonk' | 'sad-violin' | 'pop';
 }
 
 export type FilterCategory = 'all' | 'trending' | 'goated' | 'india' | 'europe' | 'global' | 'video' | 'generator';

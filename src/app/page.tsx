@@ -3,12 +3,14 @@
 import React, { useState } from 'react';
 import { Header } from '@/components/common/Header';
 import { Footer } from '@/components/common/Footer';
+import { DancingCatLoader } from '@/components/common/DancingCatLoader';
 import { HeroMemeBanner } from '@/components/home/HeroMemeBanner';
 import { MemeFeed } from '@/components/home/MemeFeed';
 import { MemeSoundboard } from '@/components/home/MemeSoundboard';
 import { MemeStudioModal } from '@/components/home/MemeStudioModal';
 import { MemeRouletteModal } from '@/components/home/MemeRouletteModal';
 import { ReelPlayerModal } from '@/components/home/ReelPlayerModal';
+import { RandomMemeDropToast } from '@/components/home/RandomMemeDropToast';
 import { GOAT_MEMES } from '@/data/memes';
 import { MemeItem } from '@/types/meme';
 
@@ -27,6 +29,9 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-dark-950 text-slate-100 flex flex-col justify-between selection:bg-dank-green selection:text-black">
+      {/* 1. Dancing Cat Fullscreen Loader & Floating Mascot */}
+      <DancingCatLoader />
+
       <div>
         {/* Navigation Bar */}
         <Header
@@ -41,7 +46,7 @@ export default function HomePage() {
           onOpenReels={() => setIsReelsOpen(true)}
         />
 
-        {/* Hero Section */}
+        {/* Hero Section with Featured Sovereign Smirk GOAT */}
         <HeroMemeBanner
           onOpenRoulette={() => setIsRouletteOpen(true)}
           onOpenStudio={() => {
@@ -51,7 +56,7 @@ export default function HomePage() {
           onOpenSoundboard={() => setIsSoundboardOpen(true)}
         />
 
-        {/* Interactive Meme Stream Feed */}
+        {/* Interactive Meme Stream Feed with Real Meme Images */}
         <MemeFeed
           memes={GOAT_MEMES}
           searchQuery={searchQuery}
@@ -62,7 +67,10 @@ export default function HomePage() {
       {/* Footer */}
       <Footer />
 
-      {/* Modals */}
+      {/* 2. Every 10 Seconds Random Meme Drop Toast */}
+      <RandomMemeDropToast />
+
+      {/* Modals & Tools */}
       <MemeSoundboard
         isOpen={isSoundboardOpen}
         onClose={() => setIsSoundboardOpen(false)}
