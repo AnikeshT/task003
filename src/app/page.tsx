@@ -14,7 +14,6 @@ import { EditorialFaq } from '@/components/home/EditorialFaq';
 import { MemeSoundboard } from '@/components/home/MemeSoundboard';
 import { MemeStudioModal } from '@/components/home/MemeStudioModal';
 import { MemeRouletteModal } from '@/components/home/MemeRouletteModal';
-import { RandomMemeDropToast } from '@/components/home/RandomMemeDropToast';
 import { GOAT_MEMES } from '@/data/memes';
 import { MemeItem } from '@/types/meme';
 
@@ -94,9 +93,6 @@ export default function HomePage() {
 
       {/* Footer */}
       <Footer />
-
-      {/* 9. Live 10-Second Random Meme Drop */}
-      <RandomMemeDropToast />
 
       {/* Modals & Interactive Tools */}
       <MemeSoundboard
