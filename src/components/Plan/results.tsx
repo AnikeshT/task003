@@ -28,7 +28,7 @@ export function Results({ questions, answers, picks, absent, onEdit, onRestart }
   if (!best) return null
   const full = rest.filter((p) => !p.misses.length)
   const close = rest.filter((p) => p.misses.length)
-  const place = answers.where && (answers.where as City) in cities ? cities[answers.where as City]?.name ?? "Portugal" : "Portugal"
+  const place = answers.where && (answers.where as City) in cities ? cities[answers.where as City]?.name ?? "the Mediterranean" : "the Mediterranean"
 
   return (
     <div>

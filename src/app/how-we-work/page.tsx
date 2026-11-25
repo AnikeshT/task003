@@ -2,9 +2,9 @@ import { HowWeWork } from "@/components/HowWeWork"
 import { pageMetadata } from "@/lib/seo/metadata"
 
 export const metadata = pageMetadata({
-  title: "How We Choose Tours and Earn Money | Dunes And Sky",
+  title: "How We Curate Tours & Terroirs | Terroir & Cru",
   description:
-    "Where our tours, prices and ratings come from, how they are ordered, who takes your booking, and how Dunes And Sky earns a commission.",
+    "How our vineyard expeditions, prices, and sommelier ratings are selected, vetted, and presented with transparent pricing.",
   path: "/how-we-work",
 })
 

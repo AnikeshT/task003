@@ -1,12 +1,12 @@
 import type { City } from "@/data/tours"
 
 export const cityTabs: { value: "all" | City; label: string }[] = [
-  { value: "all", label: "All Territories" },
+  { value: "all", label: "All Terroirs" },
+  { value: "barcelona", label: "Barcelona & Penedès" },
+  { value: "santorini", label: "Santorini & Cyclades" },
+  { value: "sicily", label: "Sicily & Mount Etna" },
   { value: "douro-valley", label: "Douro Valley" },
   { value: "porto", label: "Porto & Gaia" },
-  { value: "alentejo", label: "Alentejo" },
-  { value: "lisbon", label: "Lisbon & Sintra" },
-  { value: "minho", label: "Minho & Vinho Verde" },
 ]
 
 export const sortOptions = [

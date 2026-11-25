@@ -6,12 +6,12 @@ import { Compare } from "./compare"
 
 const destinationQuestions = [
   {
-    q: "How many days are recommended for a Portugal wine tour?",
-    a: "We recommend at least 7 to 10 days: 3 days exploring Porto and the Douro Valley, 2 days in the Minho or Vinho Verde, and 3 to 4 days across Lisbon, Sintra, and the Alentejo.",
+    q: "Can I combine multiple Mediterranean wine destinations into one trip?",
+    a: "Yes. Direct short-haul Mediterranean flights connect Barcelona, Santorini, Sicily, and Porto seamlessly. Many travelers spend 4 days in Catalonia and 4 days in Santorini or Sicily.",
   },
   {
-    q: "Can I do the Douro Valley as a day trip from Porto?",
-    a: "Yes. Our private masterclass tours depart Porto at 8:30 AM via private Mercedes vehicle, includes a rabelo boat cruise in Pinhão, estate tasting, 4-course lunch, and returns you to Porto by 6:00 PM.",
+    q: "What makes the terroirs of Barcelona, Santorini, and Sicily so contrasting?",
+    a: "Barcelona offers chalk limestone cava soils and steep slate Priorat hills; Santorini possesses ancient volcanic ash and ungrafted kouloura baskets with sea-saline minerality; Sicily features black volcanic basalt terraces and alpine night cooling on Mount Etna.",
   },
 ]
 
@@ -19,18 +19,18 @@ export function Destinations() {
   return (
     <>
       <PageHero
-        image="/videos/douro.jpg"
-        alt="Terraced vineyards of the Douro Valley"
-        title="Douro, Porto, or Alentejo?"
-        intro="From the dramatic steep schist terraces of the Douro to the centuries-old Port cellars of Gaia and the golden cork-oak plains of Alentejo, each Portuguese terroir offers a distinct world of flavour."
+        image="https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=1600&q=85"
+        alt="Mediterranean wine and gastronomic landscape"
+        title="Barcelona, Santorini, or Sicily?"
+        intro="From chalk Cava cellars and tapas bodegas in Catalonia to volcanic cliffside canavas on Santorini and high-altitude lava terraces on Mount Etna, each Mediterranean terroir offers an unforgettable journey of flavor."
         crumbs={[
           { href: "/", label: "Home" },
-          { href: "/destinations", label: "Terroir Territories" },
+          { href: "/destinations", label: "Terroir Regions" },
         ]}
       />
       <Cities />
       <Compare />
-      <Faq title="Questions about Portugal's wine territories" items={destinationQuestions} />
+      <Faq title="Questions about Mediterranean wine regions" items={destinationQuestions} />
       <CtaBand />
     </>
   )

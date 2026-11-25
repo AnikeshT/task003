@@ -8,10 +8,10 @@ export function About() {
   return (
     <>
       <PageHero
-        image="/images/camel-riders.jpg"
-        alt="Riders on a line of camels crossing the dunes"
-        title="About Dunes And Sky"
-        intro="We list tours in Dubai and Abu Dhabi, from desert safaris and city tours to boat trips. Local operators run them."
+        image="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=85"
+        alt="Sommelier pouring vintage wine in an ancient cellar"
+        title="About Terroir & Cru"
+        intro="We curate premier wine tastings, private bodega cellars, and Michelin-starred culinary odysseys across Barcelona, Santorini, Sicily, and the Mediterranean."
         crumbs={[
           { href: "/", label: "Home" },
           { href: "/about", label: "About" },

@@ -2,9 +2,9 @@ import { Destinations } from "@/components/Destinations"
 import { pageMetadata } from "@/lib/seo/metadata"
 
 export const metadata = pageMetadata({
-  title: "Dubai or Abu Dhabi? Compare Both | Dunes And Sky",
+  title: "Mediterranean Wine Regions: Barcelona, Santorini & Sicily | Terroir & Cru",
   description:
-    "Dubai and Abu Dhabi side by side: what each city is known for, how far apart they are, and the tours you can take in both.",
+    "Explore the distinct terroirs of Barcelona and Penedès, volcanic Santorini, and Mount Etna in Sicily side by side.",
   path: "/destinations",
 })
 

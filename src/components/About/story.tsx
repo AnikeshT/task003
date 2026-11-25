@@ -6,19 +6,19 @@ export function Story() {
       <div className="container-x">
         <ScrollText
           className="display-md mx-auto max-w-4xl text-center"
-          text="Some tours fit five stops into a day. Others give you a whole evening in the desert. We show the hours, the price and what is included, so you can tell them apart before you pay."
+          text="Some tours rush through six commercial stops in a crowded bus. Others invite you into private family cellars for an unhurried afternoon with the master winemaker. We show the vineyard hours, the exact vintage pours, and honest inclusions before you reserve."
         />
       </div>
       <div className="mt-24 grid md:mt-32 md:grid-cols-2">
         <ParallaxImage
-          src="/images/desert-sunset.jpg"
-          alt="Sun setting over low dunes and ghaf trees"
+          src="https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=1600&q=85"
+          alt="Catalan artisan tapas and wine pairing"
           sizes="(min-width: 768px) 50vw, 100vw"
           className="aspect-[5/4]"
         />
         <ParallaxImage
-          src="/images/spice-souk.jpg"
-          alt="Spices and dried flowers in the souk"
+          src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1600&q=85"
+          alt="Santorini caldera cliffside vineyard at sunset"
           sizes="(min-width: 768px) 50vw, 100vw"
           className="aspect-[5/4]"
         />

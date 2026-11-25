@@ -1,6 +1,66 @@
 import type { City } from "@/data/tours"
 
 export const guide: Record<City, { title: string; text: string; image: string; alt: string }[]> = {
+  barcelona: [
+    {
+      title: "Chalk Cava Caves of Penedès",
+      text: "Descend into underground limestone cellars where Gran Reserva Cavas rest on lees for up to 48 months in silent Romanesque vaults.",
+      image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1200&q=80",
+      alt: "Oak barrels and vintage bottles in a chalk wine cellar",
+    },
+    {
+      title: "Gothic Quarter & El Born Tapas",
+      text: "Wander through centuries-old stone alleyways tasting hand-carved Jamón Ibérico de Bellota, artisan cheeses, and bold Priorat DOCa reds.",
+      image: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=1200&q=80",
+      alt: "Catalan tapas table with wine glasses",
+    },
+    {
+      title: "Priorat Slate Terraces",
+      text: "Venture to steep llicorella slate hillsides where century-old Garnacha vines produce some of Spain's most concentrated, world-renowned wines.",
+      image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1200&q=80",
+      alt: "Sunlit vineyard grapes on steep hills",
+    },
+  ],
+  santorini: [
+    {
+      title: "Ancient Ungrafted Kouloura Baskets",
+      text: "Walk through 400-year-old vines woven into protective ground wreaths to shield precious Assyrtiko grapes from ferocious Aegean Meltemi winds.",
+      image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1200&q=80",
+      alt: "Santorini caldera cliffside vineyards at sunset",
+    },
+    {
+      title: "Historic Canavas in Volcanic Ash",
+      text: "Step inside subterranean wine vaults carved directly into volcanic pumice strata, maintaining natural cellar cooling year-round.",
+      image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
+      alt: "White-washed terraces and blue domes in Santorini",
+    },
+    {
+      title: "Sunset Caldera Vinsanto Tastings",
+      text: "Sip amber Vinsanto crafted from sun-dried grapes as the golden sun drops below the Aegean caldera horizon in Oia.",
+      image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1200&q=80",
+      alt: "Wine glasses overlooking the sea at dusk",
+    },
+  ],
+  sicily: [
+    {
+      title: "Europe's Highest Volcanic Terroir",
+      text: "Ascend the slopes of Mount Etna to 900 meters altitude where black lava basalt and cool alpine nights create wines of Burgundian elegance.",
+      image: "https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?auto=format&fit=crop&w=1200&q=80",
+      alt: "Mount Etna volcanic terraces and vineyards",
+    },
+    {
+      title: "Old-Vine Nerello Mascalese",
+      text: "Taste refined single-contrada crus produced from 100-year-old pre-phylloxera bush vines rooted in historic lava flows.",
+      image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80",
+      alt: "Sicilian coastal vineyard hillside",
+    },
+    {
+      title: "Trattoria Country Feasts",
+      text: "Savor handmade wild fennel pasta, Bronte pistachios, warm ricotta, and fresh Sicilian cannoli paired with mineral Etna Bianco Superiore.",
+      image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
+      alt: "Authentic Italian wine dining feast",
+    },
+  ],
   "douro-valley": [
     {
       title: "Schist terraces at dawn",
@@ -33,48 +93,6 @@ export const guide: Record<City, { title: string; text: string; image: string; a
       text: "Duck into traditional tavernas for salt cod fritters, flamed chouriço, and hand-sliced presunto paired with Douro DOC reserve reds.",
       image: "https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=1200&q=80",
       alt: "Ribeira colorful riverfront facades in Porto",
-    },
-  ],
-  alentejo: [
-    {
-      title: "2,000 years of Talha amphorae",
-      text: "Discover beeswax-lined clay amphorae where grapes ferment naturally on their skins, producing rustic, mineral-rich amber and red wines.",
-      image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1200&q=80",
-      alt: "Golden plains of Alentejo at sunset",
-    },
-    {
-      title: "Montado cork forests & Porco Preto",
-      text: "Wander among protected cork oak trees where acorn-grazing black Iberian pigs yield world-renowned cured charcuterie.",
-      image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1200&q=80",
-      alt: "Ancient cork oak trees under the Alentejo sun",
-    },
-  ],
-  lisbon: [
-    {
-      title: "Atlantic Colares sand vines",
-      text: "Taste rare pre-phylloxera Ramisco vines planted deep into ocean sand dunes, producing saline, structured, legendary reds.",
-      image: "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?auto=format&fit=crop&w=1200&q=80",
-      alt: "Cobblestone street in Lisbon with yellow tram",
-    },
-    {
-      title: "Alfama candlelight Fado",
-      text: "Experience raw, acoustic Fado in intimate neighborhood tascas while enjoying petiscos and artisanal cheeses.",
-      image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1200&q=80",
-      alt: "Intimate candlelight dinner in Lisbon",
-    },
-  ],
-  minho: [
-    {
-      title: "17th-century granite solares",
-      text: "Visit noble manor estates in Monção and Melgaço, surrounded by high-trellised pergola vines and ancient camellia gardens.",
-      image: "https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=1200&q=80",
-      alt: "Green rolling vineyards in the Minho region",
-    },
-    {
-      title: "Crisp mineral Alvarinho",
-      text: "Savor world-class Alvarinho with notes of peach blossom and sea salt, accompanied by wood-fired cornbread and river trout.",
-      image: "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?auto=format&fit=crop&w=1200&q=80",
-      alt: "Chilled white wine poured in a vineyard setting",
     },
   ],
 }

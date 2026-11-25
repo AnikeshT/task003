@@ -2,9 +2,9 @@ import { About } from "@/components/About"
 import { pageMetadata } from "@/lib/seo/metadata"
 
 export const metadata = pageMetadata({
-  title: "About Dunes And Sky, a UAE Tour Directory",
+  title: "About Terroir & Cru | Mediterranean Wine & Gourmet Voyages",
   description:
-    "Dunes And Sky lists tours in Dubai and Abu Dhabi run by local operators, from desert safaris to Grand Mosque visits and boat trips. See how it works.",
+    "Terroir & Cru curates masterclass wine tastings, historic vineyard cellars, and Michelin-starred culinary odysseys across Barcelona, Santorini, Sicily, and the Mediterranean.",
   path: "/about",
 })
 

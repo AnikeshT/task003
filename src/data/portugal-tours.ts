@@ -2,6 +2,180 @@ import type { Tour } from "./tours"
 
 export const PORTUGAL_TOURS: Tour[] = [
   {
+    id: "barcelona-wine-gourmet-food-tour",
+    slug: "barcelona-wine-gourmet-food-tour",
+    sameAs: null,
+    title: "BARCELONA WINE & GOURMET FOOD TOUR",
+    operator: "Catalan Sommelier Guild & Bodegas Torres",
+    city: "barcelona",
+    startsIn: "barcelona",
+    category: "gourmet-pairing",
+    duration: "Full day (7.5 hours)",
+    hours: 7.5,
+    price: 265,
+    currency: "EUR",
+    rating: 4.98,
+    reviews: 184,
+    tripadvisor: { url: "https://tripadvisor.com", host: false },
+    isPrivate: true,
+    featured: true,
+    pickup: "Private luxury chauffeur from any hotel or residence in Barcelona",
+    languages: ["English", "Spanish", "Catalan", "French"],
+    images: [
+      "https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1600&q=85",
+    ],
+    summary:
+      "An unforgettable gastronomic pilgrimage through Barcelona and the chalk terroirs of Penedès. Taste vintage Gran Reserva Cava directly from historic underground cellars, savor hand-carved Jamón Ibérico de Bellota in the Gothic Quarter, and feast on a 5-course chef-table pairing lunch.",
+    description: [
+      "Catalonia is one of the Mediterranean's most storied culinary sanctuaries, where avant-garde gastronomic creativity meets ancient Roman and Benedictine winemaking heritage.",
+      "Begin your morning with private chauffeured transport into the rolling chalk hills of Penedès. Step into a family-owned 18th-century bodega where the head winemaker guides you through subterranean chalk caves where Gran Reserva Cavas mature for up to 48 months.",
+      "Return to Barcelona for an exclusive sommelier-curated culinary walk through the labyrinthine Gothic Quarter and El Born. Gain VIP access to historic bodegas and hidden tascas bypassed by tourists.",
+      "Conclude with a private 5-course chef pairing menu featuring Palamós red prawns, Pa amb Tomàquet, acorn-fed Iberian ham, and artisan cheeses paired with rare mineral Priorat reds and barrel-aged Whites."
+    ],
+    highlights: [
+      "Private VIP cellar tour and vintage barrel disgorgement tasting at a boutique Penedès estate",
+      "Curated 5-stop gourmet tapas trail through Barcelona's Gothic Quarter and El Born",
+      "Master sommelier guided pairing of 8 distinguished Catalan wines and Gran Reserva Cavas",
+      "Private Mercedes-Benz chauffeur service throughout the entire day"
+    ],
+    included: [
+      "Private Mercedes-Benz V-Class chauffeur service with Barcelona hotel pickup and drop-off",
+      "Certified WSET Level 3 English-speaking Master Sommelier guide",
+      "All private cellar tasting fees, reserve pours, and cave access",
+      "5-course gourmet chef pairing lunch and all artisan tapas stops",
+      "Acorn-fed Jamón Ibérico masterclass with master carver (Cortador)"
+    ],
+    excluded: [
+      "Personal bottle purchases from estate private reserves",
+      "Gratuities for restaurant and cellar staff"
+    ],
+    meetingPoint: "Direct pickup from your hotel, apartment, or cruise terminal in Barcelona.",
+    cancellation: {
+      free: true,
+      title: "Free cancellation up to 48 hours before departure",
+      fees: ["Full refund if cancelled at least 48 hours prior", "50% refund within 24-48 hours"]
+    },
+    bookingUrl: "/plan?tour=barcelona-wine-gourmet-food-tour"
+  },
+  {
+    id: "private-santorini-wine-tasting-tour",
+    slug: "private-santorini-wine-tasting-tour",
+    sameAs: null,
+    title: "Private Santorini Wine Tasting Tour",
+    operator: "Aegean Terroir & Estate Argyros Oenologists",
+    city: "santorini",
+    startsIn: "santorini",
+    category: "volcanic-terroir",
+    duration: "Sunset half day (5 hours)",
+    hours: 5,
+    price: 295,
+    currency: "EUR",
+    rating: 4.99,
+    reviews: 247,
+    tripadvisor: { url: "https://tripadvisor.com", host: false },
+    isPrivate: true,
+    featured: true,
+    pickup: "Private pickup from any hotel, villa, or Fira cable car in Santorini",
+    languages: ["English", "Greek", "German"],
+    images: [
+      "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=85",
+    ],
+    summary:
+      "Uncover the volcanic soul of Santorini. Walk through 150-year-old un-grafted basket vines (kouloura) anchored in volcanic pumice, taste mineral Assyrtiko, Nyfteri, and amber Vinsanto across 3 celebrated cliffside wineries, capped by private caldera sunset dining.",
+    description: [
+      "Santorini's terroir is forged by violent volcanic eruptions. With no organic matter and constant Aegean Meltemi winds, ancient vines are trained into crown-shaped baskets (kouloura) low to the pumice ground.",
+      "Join a dedicated oenologist for an intimate journey to 3 distinct historic canavas (wine cellars) carved directly into volcanic rock strata.",
+      "Taste bone-dry, razor-sharp Assyrtiko renowned worldwide for its saline minerality, citrus blossom aromatics, and vibrant acidity, followed by rare oak-aged Nyfteri harvested only by moonlight.",
+      "Finish on a private cliffside terrace suspended 300 meters above the Aegean caldera, sipping 20-year aged sun-dried Vinsanto accompanied by artisanal Cycladic mezze as the sun sets into the sea."
+    ],
+    highlights: [
+      "Private VIP visits to 3 acclaimed caldera wineries including historic subterranean canavas",
+      "Comprehensive sommelier tasting of 12 distinct volcanic wines including aged Vinsanto",
+      "Walk through centuries-old un-grafted Kouloura basket vineyards with an oenologist",
+      "Reserved front-row cliffside terrace for golden hour caldera sunset dining"
+    ],
+    included: [
+      "Private air-conditioned luxury transport with island-wide hotel pickup",
+      "Certified English-speaking Oenologist guide throughout the tour",
+      "All tasting flights (12 premium wines including rare vintages)",
+      "Generous Cycladic mezze platter: Santorini fava, sun-dried tomato patties, aged graviera, and caper leaves",
+      "Chilled bottled mineral water and vineyard field guidebook"
+    ],
+    excluded: [
+      "Additional cellar bottle purchases for international shipping",
+      "Gratuities for your sommelier guide"
+    ],
+    meetingPoint: "Direct pickup from your hotel or private villa across Santorini, or from Fira port cruise tender station.",
+    cancellation: {
+      free: true,
+      title: "Free cancellation up to 48 hours before departure",
+      fees: ["Full refund if cancelled at least 48 hours prior", "50% refund within 24-48 hours"]
+    },
+    bookingUrl: "/plan?tour=private-santorini-wine-tasting-tour"
+  },
+  {
+    id: "sicily-vineyard-escape",
+    slug: "sicily-vineyard-escape",
+    sameAs: null,
+    title: "Sicily Vineyard Escape",
+    operator: "Etna DOC Consortium & Donnafugata Estates",
+    city: "sicily",
+    startsIn: "sicily",
+    category: "vineyard-escape",
+    duration: "Full day (8 hours)",
+    hours: 8,
+    price: 320,
+    currency: "EUR",
+    rating: 4.97,
+    reviews: 168,
+    tripadvisor: { url: "https://tripadvisor.com", host: false },
+    isPrivate: true,
+    featured: true,
+    pickup: "Private chauffeured pickup in Taormina, Catania, or Etna wine resort",
+    languages: ["English", "Italian", "German"],
+    images: [
+      "https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=85",
+    ],
+    summary:
+      "Ascend the dramatic volcanic slopes of Mount Etna. Experience black volcanic basalt terraces, taste high-altitude Nerello Mascalese from 100-year-old pre-phylloxera vines, and enjoy a slow 4-course Sicilian country estate feast paired with Etna DOC crus.",
+    description: [
+      "Mount Etna is known to locals as 'Idda'—the Great Mother. Its fertile black volcanic soils, dramatic alpine day-night temperature swings, and mineral basalt terraces produce Italy's most exciting volcanic crus.",
+      "Depart Taormina or Catania in a luxury private vehicle winding up through medieval stone villages and ancient chestnut groves to the northern slopes of the volcano (800-900m altitude).",
+      "Visit two prestigious family-run cantinas constructed from dark porous volcanic stone. Walk through century-old ungrafted bush vines (alberello) rooted in historic lava flows.",
+      "Savor vertical tastings of Etna Rosso, Etna Bianco Superiore, and volcanic Metodo Classico sparkling wine, followed by a lavish estate lunch featuring handmade pasta with wild fennel, Nebrodi black pig, Bronte pistachios, and fresh Sicilian cannoli."
+    ],
+    highlights: [
+      "Private guided walk through high-altitude pre-phylloxera Alberello vineyards on Mount Etna",
+      "Behind-the-scenes access to 2 historic volcanic stone cantinas with master winemakers",
+      "Structured tasting of 9 premium Etna DOC crus including single-vineyard Contrada bottlings",
+      "Traditional 4-course Sicilian country banquet with curated wine pairings"
+    ],
+    included: [
+      "Private Mercedes-Benz chauffeur from Taormina, Catania, or nearby resorts",
+      "Certified Italian AIS/WSET Sommelier and volcano expert guide",
+      "All cantina tasting fees, barrel samples, and cellar entries",
+      "4-course Sicilian estate luncheon with paired vintage wines",
+      "Fresh cannoli and artisanal almond paste tasting"
+    ],
+    excluded: [
+      "Personal cellar bottle orders shipped home",
+      "Gratuities for estate staff"
+    ],
+    meetingPoint: "Direct pickup from your hotel or private villa in Taormina, Castelmola, Giardini Naxos, or Catania.",
+    cancellation: {
+      free: true,
+      title: "Free cancellation up to 48 hours before departure",
+      fees: ["Full refund if cancelled at least 48 hours prior", "50% refund within 24-48 hours"]
+    },
+    bookingUrl: "/plan?tour=sicily-vineyard-escape"
+  },
+  {
     id: "douro-vintage-masterclass",
     slug: "douro-vintage-masterclass-private-quinta-rabelo",
     sameAs: null,
@@ -9,7 +183,7 @@ export const PORTUGAL_TOURS: Tour[] = [
     operator: "Quinta do Crasto & Heritage Oenologists",
     city: "douro-valley",
     startsIn: "porto",
-    category: "vintage-port",
+    category: "cellar-reserve",
     duration: "Full day (9 hours)",
     hours: 9,
     price: 340,
@@ -45,7 +219,7 @@ export const PORTUGAL_TOURS: Tour[] = [
       "Certified WSET Level 3 English-speaking Sommelier guide",
       "All private cellar tasting fees and vintage reserve pours",
       "4-course traditional estate lunch with curated wine pairings",
-      "1-hour private river cruise with sparkling Vinho Verde toast"
+      "1-hour private river cruise with sparkling Vinho toast"
     ],
     excluded: [
       "Personal bottle purchases from private quinta cellar",
@@ -67,7 +241,7 @@ export const PORTUGAL_TOURS: Tour[] = [
     operator: "Vila Nova Oenology Guild",
     city: "porto",
     startsIn: "porto",
-    category: "cellar-tasting",
+    category: "gourmet-pairing",
     duration: "Half day (4.5 hours)",
     hours: 4.5,
     price: 165,
@@ -98,240 +272,18 @@ export const PORTUGAL_TOURS: Tour[] = [
       "Small intimate group capped strictly at 8 guests"
     ],
     included: [
-      "Local culinary historian & certified sommelier guide",
-      "6 premium Port tastings across 2 heritage cellars",
-      "Substantial tasting dinner of authentic Portuguese petiscos",
-      "Digital insider guide to Porto's finest wine bars"
+      "Expert local sommelier storytelling guide",
+      "All tasting flights across 2 historic Port wine lodges",
+      "5 authentic petiscos courses with wine pairings",
+      "Artisanal pastel de nata tasting"
     ],
-    excluded: [
-      "Hotel transfer (easy central meeting point at Ribeira Square)"
-    ],
-    meetingPoint: "Praça da Ribeira, by the monumental stone fountain, Porto.",
+    excluded: ["Hotel transfer", "Personal purchases"],
+    meetingPoint: "Praça da Ribeira, beside the historic fountain, Porto.",
     cancellation: {
       free: true,
-      title: "Free cancellation up to 24 hours in advance",
-      fees: ["Full refund up to 24 hours before tour start"]
+      title: "Free cancellation up to 48 hours before departure",
+      fees: ["Full refund if cancelled at least 48 hours prior"]
     },
     bookingUrl: "/plan?tour=porto-secret-lodges-petiscos"
-  },
-  {
-    id: "alentejo-amphora-cork-safari",
-    slug: "alentejo-amphora-wine-cork-forest-black-pork-feast",
-    sameAs: null,
-    title: "Alentejo Golden Plains: Ancient Talha Amphorae & Cork Forest Feast",
-    operator: "Herdade & Montado Terroir Masters",
-    city: "alentejo",
-    startsIn: "lisbon",
-    category: "harvest-expedition",
-    duration: "Full day (10 hours)",
-    hours: 10,
-    price: 295,
-    currency: "EUR",
-    rating: 4.99,
-    reviews: 97,
-    tripadvisor: { url: "https://tripadvisor.com", host: false },
-    isPrivate: true,
-    featured: true,
-    pickup: "Private hotel pickup in Lisbon or Évora",
-    languages: ["English", "Portuguese"],
-    images: [
-      "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=1600&q=85"
-    ],
-    summary:
-      "Cross the 25 de Abril suspension bridge into the serene golden plains of Alentejo. Discover Roman clay amphora (Vinho de Talha) winemaking, walk centuries-old cork oak forests, and enjoy an acorn-fed Porco Preto feast in UNESCO Évora.",
-    description: [
-      "Alentejo moves to the rhythm of the sun and the soil. Here, winemakers have kept alive the 2,000-year-old Roman tradition of fermenting grapes in huge beeswax-lined clay amphorae called 'Talhas'.",
-      "Walk among ancient Montado cork oak forests where acorn-grazing black Iberian pigs roam freely under wide cobalt skies.",
-      "Explore the medieval marble walls and Roman temple of Évora before settling into a private family estate for slow-roasted Porco Preto and robust, sun-ripened Alentejano reds."
-    ],
-    highlights: [
-      "Private walking tour of a sustainable cork oak forest (Montado)",
-      "Exclusive tasting of unfiltered Vinho de Talha from clay amphorae",
-      "Gourmet multi-course lunch celebrating acorn-fed Porco Preto and local cheeses",
-      "Guided walk through the Roman Temple and Gothic streets of Évora"
-    ],
-    included: [
-      "Private Mercedes-Benz SUV transport from Lisbon with Wi-Fi",
-      "Private estate visits and cellarmaster tasting sessions",
-      "Traditional Alentejano feast with premium estate wine pairings",
-      "Olive oil tasting of cold-pressed Galega extra virgin olive oils"
-    ],
-    excluded: [
-      "Purchases of vintage wine bottles or handmade cork goods"
-    ],
-    meetingPoint: "Door-to-door pickup from any hotel or residence in Lisbon or Évora.",
-    cancellation: {
-      free: true,
-      title: "Free cancellation up to 48 hours prior",
-      fees: ["Full refund up to 48 hours prior"]
-    },
-    bookingUrl: "/plan?tour=alentejo-amphora-cork-safari"
-  },
-  {
-    id: "lisbon-fado-michelin-terroir",
-    slug: "lisbon-fado-candlelight-colares-atlantic-terroir",
-    sameAs: null,
-    title: "Lisbon & Sintra: Atlantic Colares Dunes, Historic Petiscos & Candlelit Fado",
-    operator: "Bairro Alto Culinary Circle",
-    city: "lisbon",
-    startsIn: "lisbon",
-    category: "michelin-terroir",
-    duration: "Evening (5 hours)",
-    hours: 5,
-    price: 185,
-    currency: "EUR",
-    rating: 4.96,
-    reviews: 176,
-    tripadvisor: { url: "https://tripadvisor.com", host: false },
-    isPrivate: false,
-    featured: true,
-    pickup: "Chiado, central Lisbon",
-    languages: ["English", "Portuguese", "French"],
-    images: [
-      "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?auto=format&fit=crop&w=1600&q=85"
-    ],
-    summary:
-      "Taste the salt-sprayed pre-phylloxera sand-dune wines of Colares, wander through candlelit Alfama cobblestones, and experience authentic acoustic Fado accompanied by traditional petiscos and artisanal cheeses.",
-    description: [
-      "Lisbon's culinary soul is intertwined with maritime breezes and poignant music. Taste the rarest wines in Europe: Ramisco grapes from Colares grown directly in Atlantic sand dunes that phylloxera could never reach.",
-      "Wind through the labyrinth of Alfama as the street lamps illuminate. Avoid tourist-trap dinner shows and sit in an authentic 80-year-old tasca where local fadistas sing in raw, unamplified candlelight.",
-      "Savor octopus slow-braised with garlic and coriander, grilled chouriço flamed tableside, and aged Azeitão raw-milk sheep's cheese."
-    ],
-    highlights: [
-      "Tasting of rare ungrafted Colares DOC Atlantic sand wines",
-      "Authentic candlelight Fado performance in an historic Alfama tavern",
-      "Curated 5-course petiscos tasting with artisanal Portuguese wine pairings",
-      "Insider stories of Lisbon's Bohemian culinary history"
-    ],
-    included: [
-      "Culinary storyteller and music historian guide",
-      "All petiscos courses, cheese boards, and dessert pairings",
-      "Premium wine flight including Colares DOC and Douro reserves",
-      "Reserved seating at an authentic neighborhood Fado house"
-    ],
-    excluded: [
-      "Additional spirits or cocktails after the tasting flight"
-    ],
-    meetingPoint: "Praça Luís de Camões, under the statue, Chiado, Lisbon.",
-    cancellation: {
-      free: true,
-      title: "Free cancellation up to 24 hours before start",
-      fees: ["Full refund up to 24 hours before tour start"]
-    },
-    bookingUrl: "/plan?tour=lisbon-fado-michelin-terroir"
-  },
-  {
-    id: "minho-vinho-verde-manors",
-    slug: "minho-vinho-verde-granite-manors-alvarinho-trail",
-    sameAs: null,
-    title: "Minho & Vinho Verde: 17th-Century Granite Manors & Alvarinho Trail",
-    operator: "Quintas do Norte Viticulture",
-    city: "minho",
-    startsIn: "porto",
-    category: "rabelo-cruise",
-    duration: "Full day (8.5 hours)",
-    hours: 8.5,
-    price: 245,
-    currency: "EUR",
-    rating: 4.97,
-    reviews: 83,
-    tripadvisor: { url: "https://tripadvisor.com", host: false },
-    isPrivate: true,
-    featured: false,
-    pickup: "Private hotel pickup in Porto or Braga",
-    languages: ["English", "Portuguese", "Spanish"],
-    images: [
-      "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?auto=format&fit=crop&w=1600&q=85"
-    ],
-    summary:
-      "Travel north to the lush green valleys of the Minho. Walk high pergola-trellised vines, explore 17th-century baroque granite solar estates in Monção & Melgaço, and taste world-class mineral Alvarinhos paired with river trout and artisan broa.",
-    description: [
-      "Vinho Verde is not a green grape, but a young, vibrant style born from the verdant, rain-kissed hills of the northern Minho region.",
-      "Explore noble manor houses (Solares) where noble families have crafted single-estate Alvarinho for generations.",
-      "Experience crisp, mineral, floral wines that redefine what Vinho Verde can be, accompanied by wood-oven corn bread (broa de milho), cured hams, and fresh local river catches."
-    ],
-    highlights: [
-      "Private access to a 17th-century baroque granite estate garden and cellar",
-      "Masterclass in Monção and Melgaço single-terroir Alvarinho wines",
-      "Traditional Minho lunch prepared by estate private cooks",
-      "Scenic walk through the historic ramparts of Valença do Minho"
-    ],
-    included: [
-      "Private executive chauffeured vehicle for the day",
-      "Dedicated bilingual oenologist guide",
-      "Tasting flights of 8 premium Vinho Verde & Alvarinho reserves",
-      "Complete 3-course regional estate lunch with wine"
-    ],
-    excluded: [
-      "Personal cellar acquisitions"
-    ],
-    meetingPoint: "Direct pickup at your accommodation in Porto, Guimarães, or Braga.",
-    cancellation: {
-      free: true,
-      title: "Free cancellation up to 48 hours in advance",
-      fees: ["Full refund up to 48 hours prior"]
-    },
-    bookingUrl: "/plan?tour=minho-vinho-verde-manors"
-  },
-  {
-    id: "douro-harvest-foot-treading",
-    slug: "douro-vintage-grape-harvest-lagar-foot-treading",
-    sameAs: null,
-    title: "Douro Autumn Harvest: Traditional Granite Lagar Foot-Treading & Feast",
-    operator: "Quinta do Pinhão Heritage Cellars",
-    city: "douro-valley",
-    startsIn: "porto",
-    category: "harvest-expedition",
-    duration: "Full day (9.5 hours)",
-    hours: 9.5,
-    price: 380,
-    currency: "EUR",
-    rating: 5.0,
-    reviews: 64,
-    tripadvisor: { url: "https://tripadvisor.com", host: false },
-    isPrivate: true,
-    featured: true,
-    pickup: "Private pickup in Porto or Douro Valley hotels",
-    languages: ["English", "Portuguese"],
-    images: [
-      "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1600&q=85"
-    ],
-    summary:
-      "Join the sacred autumn ritual of the Douro harvest. Pick grapes alongside estate pickers on terraced hillsides, roll up your trousers for traditional barefoot granite lagar foot-treading with accordion music, and toast with fresh fermenting must.",
-    description: [
-      "Every September and October, the Douro awakens to the rhythm of harvest songs. Step into granite troughs (lagares) that have been used since Roman antiquity to crush grapes with human warmth, keeping tannin extraction gentle and balanced.",
-      "Sing alongside local pickers as the rhythm of the harvest takes hold, followed by an unforgettable festive outdoor banquet overlooking the Douro river under olive trees.",
-      "Taste unreleased barrel samples alongside aged Tawny Ports that were trodden in the very same lagares 30 years ago."
-    ],
-    highlights: [
-      "Hands-on participation in grape harvest picking on schist terraces",
-      "Authentic lagar foot-treading experience in historic granite stone tanks",
-      "Celebratory harvest feast with live accordion folklore and roasted meats",
-      "Barrel room tasting of vintage must and 30-year aged Port reserves"
-    ],
-    included: [
-      "Full private transport with driver",
-      "Harvest kit (shears, estate apron, straw hat)",
-      "Lagar participation and washing facilities",
-      "Abundant harvest lunch and unlimited estate wines"
-    ],
-    excluded: [
-      "Shipping costs for custom wine orders"
-    ],
-    meetingPoint: "Private hotel pickup in Porto or Peso da Régua.",
-    cancellation: {
-      free: true,
-      title: "Free cancellation up to 72 hours prior",
-      fees: ["Full refund up to 72 hours prior to harvest date"]
-    },
-    bookingUrl: "/plan?tour=douro-harvest-foot-treading"
   }
 ]

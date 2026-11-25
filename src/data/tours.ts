@@ -1,5 +1,5 @@
-export type City = "douro-valley" | "porto" | "alentejo" | "lisbon" | "minho"
-export type Category = "vintage-port" | "cellar-tasting" | "michelin-terroir" | "harvest-expedition" | "rabelo-cruise"
+export type City = "barcelona" | "santorini" | "sicily" | "douro-valley" | "porto"
+export type Category = "gourmet-pairing" | "volcanic-terroir" | "cellar-reserve" | "harvest-masterclass" | "vineyard-escape"
 
 /** `host` is true when the page covers everything the tour's host runs, not this one tour. */
 export type Tripadvisor = { url: string; host: boolean }
@@ -59,6 +59,60 @@ export const cities: Record<
     search: { title: string; description: string }
   }
 > = {
+  barcelona: {
+    name: "Barcelona & Penedès",
+    portuguese: "Catalunya i Penedès",
+    tagline: "Historic chalk cava cellars, Catalan tapas & sea breeze",
+    intro:
+      "From the bustling Gothic Quarter wine bars to the undulating chalk soils of Penedès and steep slate llicorella terraces of Priorat, Catalonia is a world-class temple of oenology and gastronomy.",
+    image: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=1600&q=85",
+    imageAlt: "Gourmet Catalan tapas and rich red wine in a Barcelona bodega",
+    secondary: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1600&q=85",
+    facts: [
+      { label: "Signature", value: "Artisanal Cava & Priorat DOCa" },
+      { label: "From City", value: "45 min to vineyards" },
+    ],
+    search: {
+      title: "Barcelona Wine & Gourmet Food Tours | Terroir & Cru",
+      description: "Private Penedès cava cellar tastings, Gothic Quarter tapas trails, and Priorat sommelier tours.",
+    },
+  },
+  santorini: {
+    name: "Santorini & Cyclades",
+    portuguese: "Santorini & Kouloura",
+    tagline: "Ancient volcanic caldera, basket vines & mineral Assyrtiko",
+    intro:
+      "Perched atop towering caldera cliffs above the Aegean Sea. Walk through 400-year-old ungrafted basket vines rooted in volcanic pumice, and taste crisp, bone-dry Assyrtiko alongside sun-dried Vinsanto.",
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1600&q=85",
+    imageAlt: "Santorini caldera cliffside village at sunset with Aegean sea view",
+    secondary: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1600&q=85",
+    facts: [
+      { label: "Terroir", value: "Volcanic Ash & Pumice" },
+      { label: "Vine Style", value: "Ungrafted Kouloura Baskets" },
+    ],
+    search: {
+      title: "Private Santorini Wine Tasting Tours | Terroir & Cru",
+      description: "Exclusive private caldera winery tastings, volcanic Assyrtiko masterclasses, and Oia sunset dining.",
+    },
+  },
+  sicily: {
+    name: "Sicily & Mount Etna",
+    portuguese: "Sicilia & Monte Etna",
+    tagline: "Black volcanic basalt, ancient vines & Sicilian feasts",
+    intro:
+      "Europe's highest active volcano is home to one of the world's most thrilling wine revivals. High-altitude Nerello Mascalese from century-old pre-phylloxera vines paired with Sicilian cannoli, pistachios, and fresh seafood.",
+    image: "https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?auto=format&fit=crop&w=1600&q=85",
+    imageAlt: "Mount Etna smoking volcanic peak and lush vineyard terraces in Sicily",
+    secondary: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1600&q=85",
+    facts: [
+      { label: "Elevation", value: "Up to 1,000m on Etna" },
+      { label: "Volcano", value: "Active basalt mineral soils" },
+    ],
+    search: {
+      title: "Sicily Vineyard Escape & Etna Wine Tours | Terroir & Cru",
+      description: "Mount Etna volcanic cantina tours, Nerello Mascalese tastings, and authentic Sicilian farm feasts.",
+    },
+  },
   "douro-valley": {
     name: "Douro Valley",
     portuguese: "Vale do Douro",
@@ -73,7 +127,7 @@ export const cities: Record<
       { label: "From Porto", value: "1 hr 30 min" },
     ],
     search: {
-      title: "Douro Valley Wine & Food Tours | Vinho & Terroir",
+      title: "Douro Valley Wine & Food Tours | Terroir & Cru",
       description: "Private Quintas, traditional rabelo boat cruises, and vintage Port barrel tastings in the Douro Valley.",
     },
   },
@@ -91,97 +145,43 @@ export const cities: Record<
       { label: "Cellar lodges", value: "Over 50 historic" },
     ],
     search: {
-      title: "Porto Wine Lodge Cellars & Petiscos Tours | Vinho & Terroir",
+      title: "Porto Wine Lodge Cellars & Petiscos Tours | Terroir & Cru",
       description: "Explore the historic Port wine lodges of Vila Nova de Gaia with master sommelier-led tastings and Ribeira culinary walks.",
-    },
-  },
-  alentejo: {
-    name: "Alentejo & Évora",
-    portuguese: "Alentejo e Évora",
-    tagline: "Sun-drenched golden plains & Roman amphorae",
-    intro:
-      "Portugal's slow-living breadbasket. Ancient Roman Vinho de Talha fermented in beeswax-lined clay pots, vast cork-oak forests, acorn-fed black Iberian pigs, and UNESCO marble town Évora.",
-    image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1600&q=85",
-    imageAlt: "Golden rolling plains and cork trees in Alentejo at sunset",
-    secondary: "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1600&q=85",
-    facts: [
-      { label: "Specialty", value: "Vinho de Talha" },
-      { label: "From Lisbon", value: "1 hr 15 min" },
-    ],
-    search: {
-      title: "Alentejo Amphora Wine & Cork Safari Tours | Vinho & Terroir",
-      description: "Experience clay amphora winemaking, Montado cork oak forests, and Porco Preto feasts across Alentejo.",
-    },
-  },
-  lisbon: {
-    name: "Lisbon & Sintra",
-    portuguese: "Lisboa e Sintra",
-    tagline: "Atlantic dune terroir, historic tascas & soulful Fado",
-    intro:
-      "From rare pre-phylloxera sand-dune Ramisco vines in coastal Colares to midnight petiscos and melancholy Fado in candlelit Alfama, Lisbon's culinary spirit is deeply maritime.",
-    image: "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?auto=format&fit=crop&w=1600&q=85",
-    imageAlt: "Yellow vintage tram rattling through historic cobblestone streets in Lisbon",
-    secondary: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=85",
-    facts: [
-      { label: "Signature", value: "Colares DOC & Petiscos" },
-      { label: "Fado soul", value: "Alfama & Mouraria" },
-    ],
-    search: {
-      title: "Lisbon Wine Tasting, Petiscos & Fado Tours | Vinho & Terroir",
-      description: "Savor Colares sand-dune wines, authentic Alfama tascas, and intimate candlelight Fado evenings in Lisbon.",
-    },
-  },
-  minho: {
-    name: "Minho & Vinho Verde",
-    portuguese: "Minho e Vinho Verde",
-    tagline: "Lush emerald valleys, granite manors & crisp Alvarinho",
-    intro:
-      "Green hillsides cooled by Atlantic rains. Stately 17th-century granite solar estates, high-pergola vineyards, and crisp, mineral-drenched Alvarinho paired with river catches and cornbread.",
-    image: "https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=1600&q=85",
-    imageAlt: "Emerald vineyards and granite stone walls in the Minho region",
-    secondary: "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?auto=format&fit=crop&w=1600&q=85",
-    facts: [
-      { label: "Grape hero", value: "Alvarinho" },
-      { label: "Terroir", value: "Granite & Maritime" },
-    ],
-    search: {
-      title: "Minho & Vinho Verde Country Estate Tours | Vinho & Terroir",
-      description: "Walk historic granite manor estates in the Minho and taste world-class mineral Vinho Verde and Alvarinho.",
     },
   },
 }
 
 export const categories: Record<Category, { name: string; image: string; imageAlt: string }> = {
-  "vintage-port": {
-    name: "Vintage Port",
+  "gourmet-pairing": {
+    name: "Gourmet Tapas & Wine",
+    image: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=1600&q=85",
+    imageAlt: "Gourmet tapas and vintage wine glasses in an atmospheric cellar",
+  },
+  "volcanic-terroir": {
+    name: "Volcanic Terroir",
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1600&q=85",
+    imageAlt: "Caldera cliffside vineyard overlooking the Aegean sea",
+  },
+  "cellar-reserve": {
+    name: "Cellar & Grand Cru",
     image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=85",
-    imageAlt: "A glass of deep red vintage Port wine poured in an ancient cellar",
+    imageAlt: "Oak barrel cellar with vintage reserve bottles being poured",
   },
-  "cellar-tasting": {
-    name: "Cellar Tasting",
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=1600&q=85",
-    imageAlt: "Historic oak barrel vaults in Vila Nova de Gaia",
-  },
-  "michelin-terroir": {
-    name: "Terroir & Food",
-    image: "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?auto=format&fit=crop&w=1600&q=85",
-    imageAlt: "Gourmet Portuguese petiscos plate with cured meats, olives, and cheese",
-  },
-  "harvest-expedition": {
-    name: "Harvest & Terroir",
+  "harvest-masterclass": {
+    name: "Harvest & Masterclass",
     image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1600&q=85",
-    imageAlt: "Ripe purple grapes on the vine during the Douro harvest",
+    imageAlt: "Grapes ripening on the vine during autumn harvest",
   },
-  "rabelo-cruise": {
-    name: "Rabelo Cruise",
-    image: "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?auto=format&fit=crop&w=1600&q=85",
-    imageAlt: "Traditional wooden rabelo boat sailing under Douro terraced hills",
+  "vineyard-escape": {
+    name: "Vineyard Estate Escape",
+    image: "https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?auto=format&fit=crop&w=1600&q=85",
+    imageAlt: "Scenic rolling vineyard estate at the base of volcanic hills",
   },
 }
 
 /** Formats currency amounts gracefully. */
 export const formatPrice = (amount: number, currency: string) => {
-  const locale = currency === "EUR" ? "pt-PT" : "en-US"
+  const locale = currency === "EUR" ? "es-ES" : "en-US"
   const style = { style: "currency", currency } as const
   return new Intl.NumberFormat(locale, { ...style, minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(amount)
 }
@@ -190,23 +190,23 @@ export type Question = { q: string; a: string }
 
 export const faqs: Question[] = [
   {
-    q: "When is the best time of year for wine and food tours in Portugal?",
-    a: "May to October offers glorious vineyard weather. Late September and October is the magical harvest season (Vindimas) when you can experience active grape picking and granite lagar foot-treading in the Douro Valley.",
+    q: "What makes Mediterranean wine regions so distinct?",
+    a: "The Mediterranean basin combines ancient volcanic soils (Santorini, Mount Etna), dramatic schist terraces (Douro), and maritime microclimates (Barcelona & Penedès). Winemaking here dates back over 3,000 years, preserving pre-phylloxera ungrafted vines found nowhere else on earth.",
   },
   {
     q: "Are the tours suitable for non-wine drinkers or dietary restrictions?",
-    a: "Absolutely. Portuguese culinary culture is as celebrated as its oenology. Tours feature artisanal cheeses, olive oil tastings, fresh seafood, and farm-to-table dining. Vegetarian, pescatarian, and gluten-free adaptations are gladly arranged in advance.",
+    a: "Absolutely. Mediterranean culinary culture is inextricably tied to olive oils, artisanal cheeses, Iberian ham, truffles, and fresh coastal seafood. Full vegetarian, pescatarian, and non-alcoholic gastronomic journeys are gladly arranged.",
   },
   {
-    q: "What makes Portuguese wines so unique compared to the rest of Europe?",
-    a: "Portugal is home to over 250 indigenous grape varieties (like Touriga Nacional, Alvarinho, Baga, and Encruzado) found nowhere else on earth, plus preserved centuries-old traditions like granite lagar foot-treading and Roman clay amphora (Talha) fermentation.",
+    q: "Who leads the wine tastings and vineyard tours?",
+    a: "Every private expedition is guided by certified WSET Level 3 or Master Sommelier oenologists who have personal relationships with the estate winemakers, granting you behind-the-scenes barrel access not available to the public.",
   },
   {
     q: "What is the group size policy?",
-    a: "We adhere strictly to our small-group standard: intimate groups capped at 8 guests maximum, or completely private private-chauffeured VIP expeditions.",
+    a: "We adhere strictly to our small-group standard: intimate tours capped at 8 guests maximum, or completely private private-chauffeured VIP expeditions.",
   },
   {
-    q: "Can I cancel or change my booking?",
+    q: "Can I cancel or modify my booking?",
     a: "All our signature experiences offer free cancellation up to 48 hours before departure with a 100% full refund.",
   },
 ]

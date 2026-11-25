@@ -2,9 +2,9 @@ import { Blog } from "@/components/Blog"
 import { pageMetadata } from "@/lib/seo/metadata"
 
 export const metadata = pageMetadata({
-  title: "Dubai and Abu Dhabi Travel Guides | Dunes And Sky",
+  title: "Mediterranean Wine & Gourmet Travel Guides | Terroir & Cru",
   description:
-    "Guides to desert safaris, Abu Dhabi day trips and the Sheikh Zayed Grand Mosque, with sources and prices from the tours we list.",
+    "Curated guides to Catalan cava cellars, volcanic Santorini Assyrtiko tastings, and Mount Etna vineyard feasts.",
   path: "/blog",
 })
 

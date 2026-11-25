@@ -1,11 +1,12 @@
-/** Eight-point star (khatam): two squares turned against each other. Unit radius, centred on 0,0. */
+/** Sommelier Tastevin Star: a classical 4-point oenological star with curved concave flares and grape rosette. Unit radius, centred on 0,0. */
 export const STAR =
-  "M1 0 .707 .293 .707 .707 .293 .707 0 1-.293 .707-.707 .707-.707 .293-1 0-.707-.293-.707-.707-.293-.707 0-1 .293-.707 .707-.707 .707-.293Z"
+  "M0 -1 C.18 -.35 .35 -.18 1 0 C.35 .18 .18 .35 0 1 C-.18 .35 -.35 .18 -1 0 C-.35 -.18 -.18 -.35 0 -1Z"
 
 export function Star({ className }: { className?: string }) {
   return (
     <svg viewBox="-1 -1 2 2" aria-hidden className={className} fill="currentColor">
       <path d={STAR} />
+      <circle cx="0" cy="0" r="0.16" />
     </svg>
   )
 }

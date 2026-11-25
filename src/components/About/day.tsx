@@ -3,11 +3,11 @@ import { SectionHeading } from "@/components/Shared/section-heading"
 import { Stop } from "@/components/Shared/stop"
 
 const day = [
-  { time: "Sunrise", text: "Balloons lift over the desert, and the first safaris set out before the heat." },
-  { time: "Morning", text: "Old Dubai on foot: wind towers, the creek and the souks of Deira." },
-  { time: "Afternoon", text: "Abu Dhabi, for the Grand Mosque, Qasr Al Watan and the dome of the Louvre." },
-  { time: "Sunset", text: "Red dunes, camels and a stop on a ridge to watch the sun go down." },
-  { time: "Night", text: "Dinner and fire shows at a desert camp, or a slow cruise past the lights of the city." },
+  { time: "Sunrise", text: "Early mist rises over terraced slopes as estate harvesters inspect the first morning bunches." },
+  { time: "Morning", text: "Subterranean cellar walks: ancient chalk caves in Penedès and volcanic basalt canavas in Santorini." },
+  { time: "Afternoon", text: "Master sommelier vertical tastings paired with artisan cheeses, olive oils, and fresh local catches." },
+  { time: "Sunset", text: "Golden hour cliffside toasts overlooking the Aegean caldera or the rolling slopes of Mount Etna." },
+  { time: "Night", text: "Intimate chef-table feasts in candlelit stone bodegas with rare vintage reserves and dessert Vinsanto." },
 ]
 
 export function Day() {
@@ -15,7 +15,7 @@ export function Day() {
     <section className="relative isolate overflow-hidden bg-wine-900 py-24 text-pearl-50 md:py-36">
       <Lattice className="-z-10 text-gold-300/8" size={140} />
       <div className="container-x">
-        <SectionHeading title="A day in the Emirates" tone="dark" />
+        <SectionHeading title="A Day in the Vineyards" tone="dark" />
         <ol className="relative mx-auto mt-16 max-w-2xl md:mt-20">
           {day.map((t) => (
             <li key={t.time} className="flex flex-col items-center pb-14 text-center last:pb-0">

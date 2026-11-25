@@ -77,7 +77,7 @@ export function HeroStage({ scenes }: { scenes: Scene[] }) {
       <div className="container-x pt-[calc(var(--header-h)+7rem)] pb-5 lg:pt-[calc(var(--header-h)+1.5rem)] lg:pb-40">
         <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-12">
           <div>
-            <SplitText text={"Between\nthe terraces\nand the sea"} delay={0.3} className="display-hero lg:whitespace-nowrap" />
+            <SplitText text={"Where the vine\nmeets the sea\nand sun"} delay={0.3} className="display-hero lg:whitespace-nowrap" />
             <Stop />
             <motion.p
               className="lead mt-5 max-w-md text-pearl-50/90"
@@ -85,7 +85,7 @@ export function HeroStage({ scenes }: { scenes: Scene[] }) {
               animate={{ opacity: 1 }}
               transition={{ duration: 1.2, ease: EASE, delay: 0.9 }}
             >
-              Compare private Quintas, historic Port lodges, and culinary terroir expeditions across Portugal by price, region, and what is included.{" "}
+              Compare private bodega cellars, volcanic caldera masterclasses, and Michelin-starred culinary odysseys across Barcelona, Santorini, and Sicily by price, terroir, and what is included.{" "}
             </motion.p>
           </div>
           <div className="mt-8 lg:mt-0 lg:w-[calc(clamp(150px,13vw,200px)*3+2.5rem)]">

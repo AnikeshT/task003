@@ -1,23 +1,54 @@
 import { cn } from "@/lib/utils"
 
-/** A stylized grape leaf & wine chalice emblem. */
+/** A bespoke sommelier tasting chalice & Mediterranean vineyard emblem. */
 export function LogoMark({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden className={cn("size-8 text-gold-300", className)}>
-      <path d="M8 22h8" />
-      <path d="M12 15v7" />
-      <path d="M12 15a5 5 0 0 0 5-5c0-4-5-8-5-8s-5 4-5 8a5 5 0 0 0 5 5Z" />
-      <path d="M12 7c-1.5 2-2 3.5-2 5a2 2 0 0 0 4 0c0-1.5-.5-3-2-5Z" fill="currentColor" fillOpacity="0.2" />
+    <svg
+      viewBox="0 0 36 36"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+      className={cn("size-8 text-gold-300 transition-transform duration-700 hover:rotate-6", className)}
+    >
+      {/* Base and stem */}
+      <path d="M12 30h12" stroke="currentColor" strokeWidth="1.75" />
+      <path d="M18 20v10" stroke="currentColor" strokeWidth="1.75" />
+      {/* Chalice bowl */}
+      <path
+        d="M10 10c0 7 3.5 10 8 10s8-3 8-10H10z"
+        fill="currentColor"
+        fillOpacity="0.22"
+        stroke="currentColor"
+        strokeWidth="1.75"
+      />
+      {/* Sommelier tastevin star above rim */}
+      <path
+        d="M18 2c.4 1.2 1 1.8 2.2 2.2-1.2.4-1.8 1-2.2 2.2-.4-1.2-1-1.8-2.2-2.2 1.2-.4 1.8-1 2.2-2.2z"
+        fill="currentColor"
+      />
+      {/* Grapevine tendril flourish */}
+      <path d="M18 24c-3-1-5-3-5.5-6" strokeWidth="1.2" strokeOpacity="0.75" />
+      <circle cx="12.5" cy="18" r="1.2" fill="currentColor" />
+      <path d="M18 26c3-1 5-3 5.5-6" strokeWidth="1.2" strokeOpacity="0.75" />
+      <circle cx="23.5" cy="20" r="1.2" fill="currentColor" />
     </svg>
   )
 }
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <span className={cn("inline-flex items-center gap-2.5", className)}>
+    <span className={cn("inline-flex items-center gap-3", className)}>
       <LogoMark />
-      <span className="font-serif text-[1.4rem] tracking-tight text-pearl-50 leading-none whitespace-nowrap">
-        Vinho & Terroir
+      <span className="flex flex-col">
+        <span className="font-serif text-[1.35rem] tracking-[0.06em] text-pearl-50 leading-none whitespace-nowrap uppercase">
+          Terroir & Cru
+        </span>
+        <span className="font-sans text-[0.6rem] tracking-[0.25em] text-gold-300/80 uppercase mt-0.5 whitespace-nowrap">
+          Wine & Gourmet Voyages
+        </span>
       </span>
     </span>
   )

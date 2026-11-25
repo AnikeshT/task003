@@ -43,21 +43,21 @@ const ABU_DHABI =
  */
 export function cityOf(title: string, destination: string | null): City {
   const t = (title + " " + (destination ?? "")).toLowerCase()
+  if (t.includes("barcelona") || t.includes("catalunya") || t.includes("pened") || t.includes("priorat")) return "barcelona"
+  if (t.includes("santorini") || t.includes("cyclades") || t.includes("assyrtiko") || t.includes("oia")) return "santorini"
+  if (t.includes("sicily") || t.includes("etna") || t.includes("catania") || t.includes("taormina")) return "sicily"
   if (t.includes("douro") || t.includes("quinta") || t.includes("régua") || t.includes("pinhão")) return "douro-valley"
-  if (t.includes("alentejo") || t.includes("évora") || t.includes("talha")) return "alentejo"
-  if (t.includes("lisbon") || t.includes("lisboa") || t.includes("sintra") || t.includes("colares")) return "lisbon"
-  if (t.includes("minho") || t.includes("vinho verde") || t.includes("alvarinho")) return "minho"
   return "porto"
 }
 
 const CATEGORY_RULES: [Category, RegExp][] = [
-  ["vintage-port", /vintage|port\b|quinta|colheita/i],
-  ["cellar-tasting", /cellar|barrel|lodge|tasting|vault/i],
-  ["michelin-terroir", /michelin|petiscos|dinner|food|chef|gastronom/i],
-  ["harvest-expedition", /harvest|cork|amphora|talha|lagar|foot/i],
-  ["rabelo-cruise", /cruise|boat|rabelo|river|sail/i],
+  ["gourmet-pairing", /gourmet|tapas|food|pairing|michelin|feast|petiscos/i],
+  ["volcanic-terroir", /volcan|santorini|caldera|assyrtiko|etna|kouloura/i],
+  ["cellar-reserve", /cellar|reserve|cava|barrel|vintage|port\b|quinta|lodge/i],
+  ["harvest-masterclass", /harvest|masterclass|crush|treading|prun/i],
+  ["vineyard-escape", /escape|estate|walk|hike|trek|country|hills/i],
 ]
-const categoryOf = (title: string): Category => CATEGORY_RULES.find(([, match]) => match.test(title))?.[0] ?? "cellar-tasting"
+const categoryOf = (title: string): Category => CATEGORY_RULES.find(([, match]) => match.test(title))?.[0] ?? "cellar-reserve"
 
 const plural = (n: number, unit: string) => `${n} ${unit}${n === 1 ? "" : "s"}`
 

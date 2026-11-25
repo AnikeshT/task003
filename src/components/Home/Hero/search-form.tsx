@@ -8,12 +8,12 @@ import { categories } from "@/data/tours"
 import { Stop } from "@/components/Shared/stop"
 
 const cityOptions = [
-  { value: "all", label: "Anywhere in Portugal" },
+  { value: "all", label: "All wine regions" },
+  { value: "barcelona", label: "Barcelona & Penedès" },
+  { value: "santorini", label: "Santorini & Cyclades" },
+  { value: "sicily", label: "Sicily & Mount Etna" },
   { value: "douro-valley", label: "Douro Valley" },
   { value: "porto", label: "Porto & Gaia" },
-  { value: "alentejo", label: "Alentejo & Évora" },
-  { value: "lisbon", label: "Lisbon & Sintra" },
-  { value: "minho", label: "Minho & Vinho Verde" },
 ]
 const categoryOptions = [
   { value: "all", label: "Any experience" },

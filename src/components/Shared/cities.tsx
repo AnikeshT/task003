@@ -4,7 +4,7 @@ import { cities, type City } from "@/data/tours"
 import { getTourList } from "@/lib/tour-hub"
 import { Stop } from "@/components/Shared/stop"
 
-const order: City[] = ["douro-valley", "porto", "alentejo"]
+const order: City[] = ["barcelona", "santorini", "sicily"]
 
 /** The flagship terroir territories as an expansive responsive polyptych. */
 export async function Cities() {

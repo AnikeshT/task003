@@ -8,16 +8,16 @@ const points = [
     text: "We cap every open group strictly at 8 travelers, keeping private cellar tastings intimate and unhurried.",
   },
   {
-    title: "Private family Quintas",
-    text: "We bypass commercial tour lodges to open private cellar doors held in Portuguese families for generations.",
+    title: "Private family estates",
+    text: "We bypass commercial tour wineries to open private cellar doors held in Mediterranean families for centuries.",
   },
   {
     title: "Certified sommeliers",
-    text: "You travel alongside WSET Level 3 sommeliers and passionate local culinary historians.",
+    text: "You travel alongside WSET Level 3 sommeliers and passionate local oenologists.",
   },
   {
     title: "Transparent terroir pricing",
-    text: "Every expedition includes all private tastings, vineyard lunches, and executive Mercedes transfers.",
+    text: "Every expedition includes all private tastings, vineyard chef feasts, and executive Mercedes transfers.",
   },
 ]
 
@@ -27,15 +27,15 @@ export function Standard() {
       <div className="relative h-[46svh] min-h-[320px] md:h-[64svh]">
         <Image
           quality={88}
-          src="/videos/douro.jpg"
-          alt="Terraced vineyards of the Douro Valley at sunset"
+          src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=85"
+          alt="Vintage wine tasting in an ancient Mediterranean stone cellar"
           fill
           sizes="100vw"
           className="object-cover object-[50%_42%]"
         />
       </div>
       <div className="container-x py-24 md:py-32">
-        <SectionHeading title="The Portuguese Guild Standard" />
+        <SectionHeading title="The Sommelier Guild Standard" />
         <dl className="mt-14 grid gap-x-12 gap-y-12 sm:grid-cols-2 md:mt-20 lg:grid-cols-4">
           {points.map((p) => (
             <div key={p.title} className="text-center">

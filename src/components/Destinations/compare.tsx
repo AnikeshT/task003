@@ -3,7 +3,7 @@ import { Prose, TableScroll } from "@/components/Shared/prose"
 import { cities, type City } from "@/data/tours"
 import { getTourList } from "@/lib/tour-hub"
 
-const order: City[] = ["douro-valley", "porto", "alentejo"]
+const order: City[] = ["barcelona", "santorini", "sicily"]
 
 /** The wine territories compared side by side. */
 export async function Compare() {
@@ -16,9 +16,9 @@ export async function Compare() {
   const stats = order.map(of)
 
   const rows = [
-    { label: "Known for", cells: ["Terraced schist vineyards & Vintage Port", "Historic granite lodges & Ribeira petiscos", "Clay Talha amphorae, cork forests & black pork"] },
-    { label: "Landscape", cells: ["Steep river gorges & olive trees", "Coastal estuary & iron bridges", "Sun-baked golden rolling plains"] },
-    { label: "Signature Grapes", cells: ["Touriga Nacional, Touriga Franca", "Aged Tawny & Colheita blends", "Antão Vaz, Trincadeira, Aragonez"] },
+    { label: "Known for", cells: ["Historic chalk Cava caves & Gothic Quarter tapas", "Volcanic cliffside canavas & ancient basket vines", "High-altitude basalt cantinas & Mount Etna feasts"] },
+    { label: "Landscape", cells: ["Rolling chalk hills & Mediterranean coast", "300m volcanic caldera cliffs & Aegean sea", "Smoking active volcanic peak & dark lava terraces"] },
+    { label: "Signature Grapes", cells: ["Macabeo, Xarel-lo, Parellada, Priorat Garnacha", "Volcanic mineral Assyrtiko, Nyfteri, Vinsanto", "Nerello Mascalese, Carricante, Nero d'Avola"] },
     { label: "Expeditions listed", cells: stats.map((s) => String(s.count)) },
     { label: "Lowest starting price", cells: stats.map((s, i) => s.cheapest ? <Price key={i} amount={s.cheapest.price!} currency={s.cheapest.currency} /> : "Inquire") },
   ]
@@ -27,8 +27,8 @@ export async function Compare() {
     <section className="bg-pearl-100 pt-24 md:pt-32">
       <div className="container-x">
         <Prose>
-          <h2>How do Portugal&apos;s wine regions compare?</h2>
-          <TableScroll label="Portugal wine regions compared">
+          <h2>How do Mediterranean wine regions compare?</h2>
+          <TableScroll label="Mediterranean wine regions compared">
             <table>
               <thead>
                 <tr>
@@ -50,11 +50,6 @@ export async function Compare() {
               </tbody>
             </table>
           </TableScroll>
-
-          <h2>Where should you base your journey?</h2>
-          <p>
-            Base yourself in Porto if you want the greatest balance: historic Port wine cellars in Vila Nova de Gaia within walking distance, Matosinhos seafood dining in the evening, and day trips upriver to the Douro Valley or north into the Minho. For slow living, starry night skies, and rustic gastronomy, spend 3 nights at a traditional countryside Herdade in the Alentejo.
-          </p>
         </Prose>
       </div>
     </section>

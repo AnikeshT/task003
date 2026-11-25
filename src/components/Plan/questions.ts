@@ -13,10 +13,11 @@ export const questionsFor = (currency: string, { spend, money }: Money): Questio
       key: "where",
       title: "Where would you like to go?",
       options: [
+        { value: "barcelona", label: "Barcelona & Penedès", note: cities.barcelona.tagline, image: cities.barcelona.image, imageAlt: cities.barcelona.imageAlt },
+        { value: "santorini", label: "Santorini & Cyclades", note: cities.santorini.tagline, image: cities.santorini.image, imageAlt: cities.santorini.imageAlt },
+        { value: "sicily", label: "Sicily & Mount Etna", note: cities.sicily.tagline, image: cities.sicily.image, imageAlt: cities.sicily.imageAlt },
         { value: "douro-valley", label: "Douro Valley", note: cities["douro-valley"].tagline, image: cities["douro-valley"].image, imageAlt: cities["douro-valley"].imageAlt },
-        { value: "porto", label: "Porto & Gaia", note: cities.porto.tagline, image: cities.porto.image, imageAlt: cities.porto.imageAlt },
-        { value: "alentejo", label: "Alentejo & Évora", note: cities.alentejo.tagline, image: cities.alentejo.image, imageAlt: cities.alentejo.imageAlt },
-        { value: "both", label: "All Regions", note: "Show me the finest across Portugal", image: "/videos/douro.jpg", imageAlt: "Douro terraces" },
+        { value: "both", label: "All Terroirs", note: "Show me the finest across the Mediterranean", image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=85", imageAlt: "Vintage wine tasting" },
       ],
     },
     {

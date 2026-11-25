@@ -2,9 +2,9 @@ import { Credits } from "@/components/Credits"
 import { pageMetadata } from "@/lib/seo/metadata"
 
 export const metadata = pageMetadata({
-  title: "Photo and Film Credits | Dunes And Sky",
+  title: "Photo & Terroir Credits | Terroir & Cru",
   description:
-    "The photographers and film-makers whose work appears on Dunes And Sky, with the licence and a link to every original.",
+    "Photographers and oenological estates whose visual work appears on Terroir & Cru.",
   path: "/credits",
   index: false,
 })

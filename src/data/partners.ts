@@ -5,19 +5,19 @@
  */
 export const partners = {
   flights: {
-    title: "Complimentary flight booking",
+    title: "Mediterranean Flights & Connections",
     short: "Flights",
-    blurb: "Every Dunes And Sky booking includes free help with flights into Dubai (DXB) or Abu Dhabi (AUH). Start with a search on Kiwi.com.",
+    blurb: "Find seamless flight connections into Barcelona El Prat (BCN), Santorini Thira (JTR), Catania Fontanarossa (CTA), or Porto (OPO).",
     cta: "Search flights",
     note: "Opens kiwi.com",
     url: "/api/flights",
     rel: "noopener sponsored",
   },
   visa: {
-    title: "UAE visa application",
+    title: "Schengen Visa & Entry Guide",
     short: "Visa",
-    blurb: "Need an entry visa? Apply online through Atlys and track it from your phone. Many nationalities get a visa on arrival and don't need to apply.",
-    cta: "Apply with Atlys",
+    blurb: "Traveling to the EU? Check visa requirements, Schengen 90-day allowances, and European entry paperwork with Atlys.",
+    cta: "Check entry requirements",
     note: "Opens atlys.com",
     url: "https://www.atlys.com",
     rel: "noopener noreferrer",

@@ -2,9 +2,9 @@ import { Tours } from "@/components/Tours"
 import { pageMetadata } from "@/lib/seo/metadata"
 
 export const metadata = pageMetadata({
-  title: "All Dubai and Abu Dhabi Tours, Compared | Dunes And Sky",
+  title: "All Mediterranean Wine & Gourmet Tours | Terroir & Cru",
   description:
-    "Every tour we list in Dubai and Abu Dhabi. Filter by city, type and length, sort by price or reviews, and see what is included before you book.",
+    "Every curated wine tasting and gourmet culinary tour across Barcelona, Santorini, Sicily, and the Douro Valley. Transparent inclusions and certified sommelier guides.",
   path: "/tours",
 })
 

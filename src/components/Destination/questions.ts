@@ -1,6 +1,48 @@
 import type { City, Question } from "@/data/tours"
 
 export const cityQuestions: Record<City, Question[]> = {
+  barcelona: [
+    {
+      q: "How far is the Penedès wine region from Barcelona?",
+      a: "Penedès is only 45 minutes south-west of central Barcelona by private car. Our tours include luxury Mercedes-Benz chauffeur pickup directly from your hotel.",
+    },
+    {
+      q: "What makes Cava different from Champagne or Prosecco?",
+      a: "Cava is produced using the exact same Traditional Method (Méthode Champenoise) as Champagne, with secondary fermentation inside the bottle. Gran Reserva Cavas spend at least 30 to 48 months on lees, giving them creamy fine bubbles and nutty brioche notes.",
+    },
+    {
+      q: "What culinary specialties are paired during the tour?",
+      a: "You will savor 100% acorn-fed Jamón Ibérico de Bellota, artisan Pan con Tomate with virgin Catalan olive oil, Boquerones, Palamós gambas, and aged Manchego.",
+    },
+  ],
+  santorini: [
+    {
+      q: "What makes Santorini's vineyards unique in the world?",
+      a: "Santorini's volcanic soils contain zero organic matter, making them immune to phylloxera. The vines are ungrafted, with root systems up to 400 years old trained into circular ground baskets (kouloura) to shield grapes from sea winds.",
+    },
+    {
+      q: "What does Assyrtiko taste like?",
+      a: "Assyrtiko is a world-class white wine known for its razor-sharp acidity, intense mineral salinity, flinty citrus notes, and profound aging potential comparable to Grand Cru Chablis.",
+    },
+    {
+      q: "What is Vinsanto?",
+      a: "Vinsanto is a naturally sweet dessert wine made from late-harvested Assyrtiko grapes sun-dried on caldera rooftops for two weeks, then barrel-aged in volcanic canavas for up to 20 years.",
+    },
+  ],
+  sicily: [
+    {
+      q: "Can you visit wineries on an active volcano?",
+      a: "Yes. The north and east slopes of Mount Etna are home to prestigious family estates. The volcanic soils are rich in minerals and basalt, producing wines of extraordinary finesse and freshness.",
+    },
+    {
+      q: "What are the primary grapes of Mount Etna?",
+      a: "Etna Rosso is made primarily from Nerello Mascalese, which produces elegant, pale ruby wines with red berry, smoke, and wild herb aromas. Etna Bianco is made from high-altitude Carricante grapes.",
+    },
+    {
+      q: "Where do tours depart from in Sicily?",
+      a: "Private chauffeur pickup is provided throughout Taormina, Catania, Giardini Naxos, or private resorts across eastern Sicily.",
+    },
+  ],
   "douro-valley": [
     {
       q: "How far is the Douro Valley from Porto?",
@@ -27,36 +69,6 @@ export const cityQuestions: Record<City, Question[]> = {
     {
       q: "What petiscos should I try in Porto?",
       a: "Do not miss Bolinhos de Bacalhau, fresh grilled sardines in Matosinhos, slow-roasted bifana, and aged Serra da Estrela mountain sheep's cheese.",
-    },
-  ],
-  alentejo: [
-    {
-      q: "What is Vinho de Talha in Alentejo?",
-      a: "Vinho de Talha is a 2,000-year-old Roman winemaking tradition preserved in Alentejo, where grapes ferment with skins and stems inside giant beeswax-coated clay amphorae.",
-    },
-    {
-      q: "What is the Montado in Alentejo?",
-      a: "The Montado is Portugal's unique agro-silvo-pastoral ecosystem of cork oak trees where black Iberian pigs roam freely eating sweet acorns.",
-    },
-  ],
-  lisbon: [
-    {
-      q: "What are the historic wines of the Lisbon region?",
-      a: "The most famous is Colares DOC, made from ungrafted Ramisco vines grown directly in sand dunes along the Atlantic coast, producing high-tannin, saline, long-aging reds.",
-    },
-    {
-      q: "Where is the best authentic Fado in Lisbon?",
-      a: "In the narrow, candlelit cobblestone alleys of Alfama and Mouraria, in small historic tascas where fadistas sing acoustic and unamplified.",
-    },
-  ],
-  minho: [
-    {
-      q: "Is Vinho Verde always white?",
-      a: "While white Alvarinho and Loureiro are the most famous globally, Vinho Verde also produces crisp rosés and traditional rustic tart reds like Vinhão.",
-    },
-    {
-      q: "Why is the wine called 'Verde' (Green)?",
-      a: "It refers to the youth and freshness of the wine—and the lush green, rain-kissed landscape of northern Portugal—not the color of the grape.",
     },
   ],
 }

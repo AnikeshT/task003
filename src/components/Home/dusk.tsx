@@ -8,8 +8,8 @@ export function Dusk() {
     <section className="relative isolate flex min-h-svh items-center overflow-hidden bg-wine-950 pt-24 pb-40 text-pearl-50">
       <Image
         quality={88}
-        src="/videos/alentejo.jpg"
-        alt="Golden evening light over Portuguese vineyards and hills"
+        src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1600&q=85"
+        alt="Golden evening light over Mediterranean vineyards and the Aegean sea"
         fill
         sizes="(min-width: 768px) 100vw, 220vw"
         className="-z-10 object-cover object-[46%_70%]"
@@ -18,10 +18,10 @@ export function Dusk() {
       <div className="absolute inset-0 -z-10 bg-wine-950/20" />
       <Reveal className="container-x text-center">
         <p className="display-md mx-auto max-w-3xl">
-          When the golden hour touches the Douro, the schist stone remembers centuries of sun.
+          When dusk descends upon the Mediterranean, ancient vines whisper the secrets of the sun and sea.
         </p>
-        <ButtonLink href="/destinations/douro-valley" variant="gold" className="mt-10">
-          Explore Douro Valley tours
+        <ButtonLink href="/tours" variant="gold" className="mt-10">
+          Explore all signature tours
         </ButtonLink>
         <Stop />
       </Reveal>
