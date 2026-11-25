@@ -41,7 +41,7 @@ export function PageHero({
             <Stop />
           </Reveal>
         )}
-        <div className="arch-wide relative mt-12 aspect-[4/3] w-full max-w-5xl bg-wine-700 md:mt-14 md:aspect-[16/9]">
+        <div className="relative mt-12 aspect-[4/3] w-full max-w-5xl overflow-hidden rounded-3xl border border-gold-500/30 bg-wine-900 shadow-2xl md:mt-14 md:aspect-[16/9]">
           <Image quality={88} src={image} alt={alt} fill priority sizes="(min-width: 1024px) 1024px, 100vw" className="object-cover" style={{ objectPosition: position }} />
         </div>
       </div>

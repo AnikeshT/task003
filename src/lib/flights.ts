@@ -3,14 +3,35 @@ const MARKER = "808981"
 const KIWI_PROGRAMME = "3791"
 
 /**
- * A Kiwi.com search from the visitor's country to the UAE, wrapped in Travelpayouts' custom link so the click is ours.
- * The short link (kiwi.tpx.gr/c0NpZMpG) always opens Spain to Germany and ignores parameters, so it can't be used here.
- * Without a country, Kiwi.com starts from the visitor's nearest city.
+ * Mediterranean gateway airports we route visitors toward.
+ * BCN = Barcelona El Prat, JTR = Santorini, CTA = Catania (Sicily), OPO = Porto.
+ * Kiwi.com accepts country codes (ES, GR, IT, PT) or IATA airport codes.
+ * We pass the visitor's origin country and let the platform pick the cheapest inbound route.
+ *
+ * Old destination was "AE" (Dubai/DXB) — replaced with "ES" (Spain/BCN) as the
+ * primary gateway since Barcelona is the flagship terroir hub.
  */
+
+/** Map visitor origin country → best Mediterranean gateway country to target */
+const GATEWAY: Record<string, string> = {
+  // If already in a terroir country, send to their nearest wine hub
+  ES: "GR", // Spanish travellers → Santorini
+  GR: "ES", // Greek travellers → Barcelona
+  IT: "PT", // Italian travellers → Porto
+  PT: "GR", // Portuguese travellers → Santorini
+}
+
 export function kiwiUrl(country: string | null) {
   const search = new URL("https://www.kiwi.com/deep")
-  if (country && /^[A-Z]{2}$/.test(country) && country !== "AE") search.searchParams.set("origin", country)
-  search.searchParams.set("destination", "AE")
+  if (country && /^[A-Z]{2}$/.test(country)) {
+    search.searchParams.set("origin", country)
+    // Route to a different terroir country for variety, default Spain/BCN
+    const dest = GATEWAY[country] ?? "ES"
+    search.searchParams.set("destination", dest)
+  } else {
+    // No origin detected — default: search for flights to Spain (Barcelona)
+    search.searchParams.set("destination", "ES")
+  }
   search.searchParams.set("departure", "anytime")
   search.searchParams.set("return", "anytime")
   search.searchParams.set("pageName", "tilesPage")

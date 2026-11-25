@@ -25,7 +25,7 @@ export async function Plan() {
           <Stop />
           <Reveal delay={0.4}>
             <p className="lead mt-4 max-w-2xl text-pearl-100/80">
-              Five short questions, and we&apos;ll pick from {tours.length} tours across Dubai and Abu Dhabi.{" "}
+              Five short questions, and we&apos;ll pick from {tours.length} curated wine and culinary tours across Barcelona, Santorini, Sicily, and Portugal.{" "}
             </p>
           </Reveal>
         </div>

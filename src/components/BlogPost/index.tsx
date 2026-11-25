@@ -33,7 +33,7 @@ export function BlogPost({ post }: { post: Post }) {
       <article className="bg-pearl-100 py-16 md:py-24">
         <div className="container-x">
           <p className="label mx-auto max-w-3xl border-b border-border pb-6 text-ink-500">
-            By <Link href="/about" className="link-underline text-wine-700">Dunes And Sky</Link>, updated{" "}
+            By <Link href="/about" className="link-underline text-wine-700">Terroir &amp; Cru</Link>, updated{" "}
             <time dateTime={post.updated}>{day(post.updated)}</time>. Our guides link to tours we may{" "}
             <Link href="/how-we-work" className="link-underline text-wine-700">earn a commission</Link> on.{" "}
           </p>

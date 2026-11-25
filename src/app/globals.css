@@ -12,21 +12,23 @@
 :root {
   /* primitives */
   --pearl-50: #ffffff;
-  --pearl-100: #f5f2eb;
-  --pearl-200: #e8e3d8;
-  --pearl-300: #d4ccc0;
-  --ink-900: #121916;
-  --ink-700: #2c3a34;
-  --ink-500: #55675f;
-  --wine-950: #0d1411;
-  --wine-900: #18221d;
-  --wine-700: #24352d;
-  --wine-600: #732034;
-  --gold-300: #ebd39b;
-  --gold-500: #c59b43;
-  --gold-700: #8a6a24;
-  --terracotta: #c06c46;
-  --olive-800: #1e332a;
+  --pearl-100: #fbf8f3;
+  --pearl-200: #efe8dc;
+  --pearl-300: #ded3c1;
+  --ink-900: #1b0e14;
+  --ink-700: #38242c;
+  --ink-500: #684f59;
+  --wine-950: #12070d;
+  --wine-900: #220b17;
+  --wine-800: #3a1024;
+  --wine-700: #551633;
+  --wine-600: #781c44;
+  --wine-500: #9e2358;
+  --gold-300: #f3dfb5;
+  --gold-500: #caa24d;
+  --gold-700: #8c6b29;
+  --terracotta: #c46845;
+  --olive-800: #29101d;
 
   /* semantic (shadcn contract) */
   --background: var(--pearl-100);
@@ -44,10 +46,10 @@
   --accent: var(--pearl-200);
   --accent-foreground: var(--ink-900);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: color-mix(in oklab, var(--ink-900) 13%, transparent);
+  --border: color-mix(in oklab, var(--ink-900) 12%, transparent);
   --input: color-mix(in oklab, var(--ink-900) 18%, transparent);
   --ring: var(--gold-500);
-  --radius: 0rem;
+  --radius: 0.5rem;
 
   --chart-1: var(--wine-700);
   --chart-2: var(--gold-500);
@@ -256,28 +258,38 @@
     inset: 7px;
     opacity: 0.6;
   }
+  /* ── Buttons ── */
+  /* Rich Brunello wine — the main CTA colour */
   .btn-wine {
     background: var(--wine-700);
     color: var(--pearl-50);
+    border-color: var(--wine-700);
   }
   .btn-wine:hover {
     background: var(--wine-600);
+    border-color: var(--wine-600);
   }
+  /* Champagne gold — secondary/highlight CTA */
   .btn-gold {
-    background: var(--gold-300);
-    color: var(--wine-900);
+    background: var(--gold-500);
+    color: var(--wine-950);
+    border-color: var(--gold-500);
   }
   .btn-gold:hover {
-    background: #e7d0a6;
+    background: var(--gold-300);
+    border-color: var(--gold-300);
   }
+  /* Ghost / outline — used on dark backgrounds */
   .btn-line {
-    border: 1px solid color-mix(in oklab, currentColor 45%, transparent);
+    border: 1.5px solid color-mix(in oklab, currentColor 55%, transparent);
+    background: transparent;
   }
   .btn-line::after {
     display: none;
   }
   .btn-line:hover {
     border-color: currentColor;
+    background: color-mix(in oklab, currentColor 8%, transparent);
   }
 
   /* Romanesque cellar barrel vault. Smooth semicircular arch for wine caves and estate galleries. */

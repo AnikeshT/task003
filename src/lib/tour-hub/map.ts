@@ -34,12 +34,8 @@ const MAX_PHOTOS = 12
 /** Photo hosts allowed in next.config.ts. */
 const photo = (u: string | null) => (u && /^https:\/\/bokun\.s3\.amazonaws\.com\//.test(u) ? u : null)
 
-const ABU_DHABI =
-  /abu ?dhabi|al ain\b|sheikh zayed (grand )?mosque|grand mosque|qasr al watan|louvre|baps|ferrari world|warner bro|sea ?world|yas island|emirates palace|liwa/i
-
 /**
- * Where a tour takes you. Operators list some Abu Dhabi tours under Dubai because the pickup is there, so the
- * title decides: "Abu Dhabi City Tour from Dubai" is Abu Dhabi, "Dubai City Tour from Abu Dhabi" is Dubai.
+ * Where a tour takes you across Mediterranean terroir hubs.
  */
 export function cityOf(title: string, destination: string | null): City {
   const t = (title + " " + (destination ?? "")).toLowerCase()
@@ -124,7 +120,7 @@ function toTour(t: HubTour): Tour | null {
     title,
     operator: d.operator ? operatorName(d.operator) : null,
     city: cityOf(title, t.destination),
-    startsIn: /abu ?dhabi/i.test(t.destination ?? "") ? "abu-dhabi" : "dubai",
+    startsIn: cityOf(title, t.destination),
     category: categoryOf(title),
     ...lengthOf(title, t.durationMinutes),
     price: t.price,
@@ -158,10 +154,10 @@ const operatorName = (s: string) =>
     .replace(/\bAnd\b/g, "and")
 
 /** Which tour keeps the plain link when several share it. Only a change here moves one of these links. */
-const LINK_OWNERS = new Map([
-  ["dubai-desert-safari-with-bbq-dinner-and-abu-dhabi-city-tour-2-days-tour", "mmiud5gf"],
-  ["private-abu-dhabi-city-tour-with-mosque", "wst6nf2d"],
-  ["private-red-dune-desert-safari", "89rbgeje"],
+const LINK_OWNERS = new Map<string, string>([
+  ["barcelona-wine-gourmet-food-tour", "bcn-wine-01"],
+  ["private-santorini-wine-tasting-tour", "santorini-wine-02"],
+  ["sicily-vineyard-escape", "sicily-wine-03"],
 ])
 
 /** Tours can share a title, and so a link. One keeps the plain link and the others add their id. */

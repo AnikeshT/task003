@@ -15,14 +15,14 @@ export async function Tours() {
     <>
       <JsonLd
         data={graph(
-          collection({ path: "/tours", name: "Tours in Dubai and Abu Dhabi", description: `${listed.length} tours across Dubai and Abu Dhabi.`, tours: listed })
+          collection({ path: "/tours", name: "All Wine & Gourmet Tours", description: `${listed.length} curated Mediterranean cellar tastings and culinary journeys.`, tours: listed })
         )}
       />
       <PageHero
-        image="/images/dubai-skyline-dusk.jpg"
-        alt="Dubai skyline at dusk seen across the water"
-        title="Tours in Dubai and Abu Dhabi"
-        intro={`${tours.length} tours to choose from. Filter by city, type or length.`}
+        image="/images/cellar-tasting.jpg"
+        alt="Candlelit stone wine cellar masterclass with reserve barrels"
+        title="All Wine & Gourmet Tours"
+        intro={`${tours.length} tours across Barcelona, Santorini, Sicily, and Douro Valley. Filter by terroir, style, or duration.`}
         crumbs={[
           { href: "/", label: "Home" },
           { href: "/tours", label: "Tours" },

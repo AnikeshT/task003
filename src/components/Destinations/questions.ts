@@ -2,15 +2,15 @@ import type { Question } from "@/data/tours"
 
 export const questions: Question[] = [
   {
-    q: "How many days do you need for Dubai and Abu Dhabi?",
-    a: "Three days is enough for a first look: one for Dubai, one for Abu Dhabi and an afternoon and evening in the desert. Add a day if you want to go inside the museums or visit a theme park.",
+    q: "How many days do you need for a Mediterranean wine expedition?",
+    a: "Three to five days is ideal for an immersive terroir exploration: 2 days for private cellar visits and estate vineyards, 1 day for gourmet pairing and olive oil pressings, and leisurely coastal culinary evenings.",
   },
   {
-    q: "Is Dubai or Abu Dhabi better for a desert safari?",
-    a: "Dubai has more to choose from and its dunes are closer, about 45 minutes away at Lahbab. The dunes at Liwa are higher, but they are about three hours away by road, so allow a full day or a night.",
+    q: "What is the best season for vineyard harvests and tasting tours?",
+    a: "September through November offers peak vendange (harvest) energy with grape pressing and autumn foliage, while May through July brings lush green vines and idyllic Mediterranean weather.",
   },
   {
-    q: "Which day is best for the Grand Mosque?",
-    a: "Any day except Friday, when it closes to visitors from 11:30 am to 2:30 pm. Hours also change during Ramadan.",
+    q: "Are private cellar tours suitable for novice wine lovers?",
+    a: "Absolutely. Every estate tour is guided by passionate sommeliers and winemakers who tailor tastings from introductory terroir basics to rare library vintages.",
   },
 ]

@@ -18,8 +18,11 @@ export const organization: Json = {
   description: site.description,
   logo: { "@type": "ImageObject", url: absolute("/logo.png"), width: 512, height: 512 },
   areaServed: [
-    { "@type": "City", name: "Dubai" },
-    { "@type": "City", name: "Abu Dhabi" },
+    { "@type": "City", name: "Barcelona" },
+    { "@type": "City", name: "Santorini" },
+    { "@type": "City", name: "Sicily" },
+    { "@type": "City", name: "Porto" },
+    { "@type": "AdministrativeArea", name: "Douro Valley" },
   ],
 }
 
@@ -60,7 +63,7 @@ export const destination = ({ path, name, description, image }: { path: string; 
   name,
   description,
   image: absolute(image),
-  containedInPlace: { "@type": "Country", name: "United Arab Emirates" },
+  containedInPlace: { "@type": "Place", name: "Mediterranean & Southern Europe" },
 })
 
 export const faqPage = (items: Question[]): Json => ({

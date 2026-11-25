@@ -26,10 +26,11 @@ export function Standard() {
     <section className="bg-pearl-50">
       <div className="relative h-[46svh] min-h-[320px] md:h-[64svh]">
         <Image
-          quality={88}
-          src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=85"
+          quality={90}
+          src="/images/sommelier-guild.jpg"
           alt="Vintage wine tasting in an ancient Mediterranean stone cellar"
           fill
+          priority
           sizes="100vw"
           className="object-cover object-[50%_42%]"
         />

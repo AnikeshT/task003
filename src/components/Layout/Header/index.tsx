@@ -46,7 +46,7 @@ export function SiteHeader() {
               <NavLinks items={navLeft} pathname={pathname} />
             </nav>
 
-            <Link href="/" aria-label="Dunes And Sky home" className="relative z-10 justify-self-start lg:justify-self-center">
+            <Link href="/" aria-label="Terroir & Cru home" className="relative z-10 justify-self-start lg:justify-self-center">
               <Logo />
             </Link>
 

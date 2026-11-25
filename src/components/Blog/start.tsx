@@ -9,19 +9,16 @@ export function Start() {
         <Prose>
           <h2>Which guide should you read first?</h2>
           <p>
-            If the desert is the plan, begin with <Link href="/blog/morning-or-evening-desert-safari-dubai">morning or evening</Link>. An
-            evening safari takes about six hours from pickup and ends with dinner and a show. A morning one takes about four and leaves the
-            rest of the day free. The guide has pickup times, sunset times through the year and who should skip the dune drive.
+            If Catalonia is on your radar, explore our cellar deep-dives into Penedès cava caves and Priorat llicorella soils.
+            Each guide highlights tasting schedules, transport from Barcelona, and private masterclasses with master sommeliers.
           </p>
           <p>
-            Then read <Link href="/blog/dubai-desert-safari-cost">what a safari costs</Link>. Its table is worked out from the tours we list,
-            so the prices move when the operators change them. It also explains why a quad bike in the title may not be in the price.
+            For volcanic terroirs, discover our Santorini and Mount Etna guides detailing indigenous varietals like Assyrtiko
+            and Nerello Mascalese, volcanic soil chemistry, and historic hillside vineyards overlooking the Mediterranean.
           </p>
           <p>
-            For the capital, the <Link href="/blog/abu-dhabi-day-trip-from-dubai">Abu Dhabi day trip</Link> compares the train, the bus, your
-            own car and a tour, and gives a plan by the hour. Before you go, check the{" "}
-            <Link href="/blog/sheikh-zayed-grand-mosque-visit">Grand Mosque guide</Link>. Entry is no longer free, the mosque asks you to book a pass, and it
-            closes to visitors for part of Friday.
+            Heading to Portugal? Our Douro Valley and Porto vintage cellar guide reveals terraced quintas, rabelo river cruises,
+            and centuries-old lodge tastings in Vila Nova de Gaia.
           </p>
 
           <h2>How do we check them?</h2>

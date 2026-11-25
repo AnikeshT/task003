@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { absolute, site } from "@/data/site"
 
-const SHARE_IMAGE = { url: "/og.jpg", width: 1200, height: 630, alt: "Dubai's skyline at dusk, seen across the water" }
+const SHARE_IMAGE = { url: "/og.jpg", width: 1200, height: 630, alt: "Sunlit Mediterranean hillside vineyards and wine cellars" }
 
 type Page = {
   /** Shown in search results as it is, so it should carry the site's name where there is room. */

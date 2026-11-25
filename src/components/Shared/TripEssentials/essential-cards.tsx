@@ -8,14 +8,14 @@ const items = [
     key: "flights",
     icon: Plane,
     from: { code: "Home", label: "Your city" },
-    to: { code: "DXB", label: "or AUH" },
+    to: { code: "BCN", label: "JTR · CTA · OPO" },
     ...partners.flights,
   },
   {
     key: "visa",
     icon: FileCheck2,
     from: { code: "Apply", label: "Online, in minutes" },
-    to: { code: "eVisa", label: "To your inbox" },
+    to: { code: "Schengen", label: "EU entry approved" },
     ...partners.visa,
   },
 ] as const

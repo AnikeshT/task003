@@ -66,7 +66,7 @@ export function HeroStage({ scenes }: { scenes: Scene[] }) {
   const current = TERROIR_DATA[selected]
 
   return (
-    <div className="relative isolate min-h-[92svh] overflow-hidden bg-wine-950 pt-[calc(var(--header-h)+1.5rem)] pb-28 text-pearl-50">
+    <div className="relative isolate overflow-hidden bg-wine-950 pt-[calc(var(--header-h)+1.5rem)] pb-28 text-pearl-50">
       {/* Background ambient vineyard glow */}
       <div className="pointer-events-none absolute -top-40 right-1/4 -z-10 size-[600px] rounded-full bg-wine-600/15 blur-[120px]" />
       <div className="pointer-events-none absolute -bottom-40 left-10 -z-10 size-[500px] rounded-full bg-olive-800/20 blur-[100px]" />
@@ -172,9 +172,9 @@ export function HeroStage({ scenes }: { scenes: Scene[] }) {
             </div>
           </div>
 
-          {/* Right Column: Architectural Cellar Arch Frame with Smooth Crossfade */}
+          {/* Right Column: Architectural Cellar Showcase with Smooth Crossfade */}
           <div className="lg:col-span-6 xl:col-span-7">
-            <div className="relative mx-auto aspect-[4/3] w-full max-w-[680px] overflow-hidden rounded-t-[140px] rounded-b-3xl border-2 border-gold-500/40 bg-wine-900 shadow-[0_20px_60px_rgba(0,0,0,0.6)] sm:aspect-[16/11]">
+            <div className="relative mx-auto aspect-[4/3] w-full max-w-[680px] overflow-hidden rounded-3xl border border-gold-500/40 bg-wine-900 shadow-[0_20px_60px_rgba(0,0,0,0.6)] sm:aspect-[16/11]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={current.key}

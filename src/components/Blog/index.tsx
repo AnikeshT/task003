@@ -12,10 +12,10 @@ export function Blog() {
     <>
       <JsonLd data={graph(blog(posts))} />
       <PageHero
-        image="/images/creek-heritage.jpg"
-        alt="Heritage houses on the bank of Dubai Creek"
-        title="Travel guides"
-        intro="What to know before you book a day in Dubai or Abu Dhabi, with the sources we used and prices from the tours we list."
+        image="/images/barcelona-vineyard.jpg"
+        alt="Sunlit Mediterranean vineyards and olive groves"
+        title="Terroir & Wine Guides"
+        intro="What to know before booking your cellar tastings across Barcelona, Santorini, Sicily, and Douro Valley."
         crumbs={[
           { href: "/", label: "Home" },
           { href: "/blog", label: "Travel guides" },
