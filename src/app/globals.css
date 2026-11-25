@@ -1,67 +1,333 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+  Dunes And Sky design tokens
+  Colour comes from three Emirati sources: the madder red of Sadu weaving,
+  the pearl the coast was built on, and gold leaf from the palace ceilings.
+*/
+:root {
+  /* primitives */
+  --pearl-50: #fbf9f8;
+  --pearl-100: #f2efed;
+  --pearl-200: #e6dfdc;
+  --pearl-300: #cfc4bf;
+  --ink-900: #1f1114;
+  --ink-700: #46343a;
+  --ink-500: #6d5a5f;
+  --wine-950: #1b060b;
+  --wine-900: #300a15;
+  --wine-700: #5c1226;
+  --wine-600: #741a32;
+  --gold-300: #dcc08f;
+  --gold-500: #b48d50;
+  --gold-700: #7a5722;
+
+  /* semantic (shadcn contract) */
+  --background: var(--pearl-100);
+  --foreground: var(--ink-900);
+  --card: var(--pearl-50);
+  --card-foreground: var(--ink-900);
+  --popover: var(--pearl-50);
+  --popover-foreground: var(--ink-900);
+  --primary: var(--wine-700);
+  --primary-foreground: var(--pearl-50);
+  --secondary: var(--pearl-200);
+  --secondary-foreground: var(--ink-900);
+  --muted: var(--pearl-200);
+  --muted-foreground: var(--ink-500);
+  --accent: var(--pearl-200);
+  --accent-foreground: var(--ink-900);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: color-mix(in oklab, var(--ink-900) 13%, transparent);
+  --input: color-mix(in oklab, var(--ink-900) 18%, transparent);
+  --ring: var(--gold-500);
+  --radius: 0rem;
+
+  --chart-1: var(--wine-700);
+  --chart-2: var(--gold-500);
+  --chart-3: var(--ink-700);
+  --chart-4: var(--pearl-300);
+  --chart-5: var(--wine-900);
+  --sidebar: var(--pearl-50);
+  --sidebar-foreground: var(--ink-900);
+  --sidebar-primary: var(--ink-900);
+  --sidebar-primary-foreground: var(--pearl-50);
+  --sidebar-accent: var(--pearl-200);
+  --sidebar-accent-foreground: var(--ink-900);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --header-h: 84px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-pearl-50: var(--pearl-50);
+  --color-pearl-100: var(--pearl-100);
+  --color-pearl-200: var(--pearl-200);
+  --color-pearl-300: var(--pearl-300);
+  --color-wine-950: var(--wine-950);
+  --color-wine-900: var(--wine-900);
+  --color-wine-700: var(--wine-700);
+  --color-wine-600: var(--wine-600);
+  --color-gold-300: var(--gold-300);
+  --color-gold-500: var(--gold-500);
+  --color-gold-700: var(--gold-700);
+  --color-ink-900: var(--ink-900);
+  --color-ink-700: var(--ink-700);
+  --color-ink-500: var(--ink-500);
+
+  --font-sans: var(--font-jost);
+  --font-serif: var(--font-marcellus);
+  --font-arabic: var(--font-amiri);
+  --font-heading: var(--font-marcellus);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+}
 
 @layer base {
-  :root {
-    --bg-dark: #07090e;
-    --card-dark: #0f141d;
-    --border-dark: rgba(255, 255, 255, 0.08);
+  * {
+    @apply border-border outline-ring/50;
   }
-
+  html {
+    @apply font-sans;
+    background: var(--wine-950);
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
   body {
-    background-color: var(--bg-dark);
-    color: #f1f5f9;
-    font-family: 'Inter', system-ui, sans-serif;
-    overflow-x: hidden;
+    @apply bg-background text-foreground;
+    overflow-x: clip;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    font-synthesis: none;
+  }
+  ::selection {
+    background: var(--wine-700);
+    color: var(--pearl-50);
+  }
+  img {
+    user-select: none;
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
   }
 }
 
-/* Meme text styling with black outline */
-.meme-text {
-  font-family: 'Impact', 'Anton', sans-serif;
-  text-transform: uppercase;
-  color: #ffffff;
-  letter-spacing: 1px;
-  text-shadow:
-    -2px -2px 0 #000,
-     2px -2px 0 #000,
-    -2px  2px 0 #000,
-     2px  2px 0 #000,
-    -3px  0   0 #000,
-     3px  0   0 #000,
-     0   -3px 0 #000,
-     0    3px 0 #000;
+@layer components {
+  .container-x {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+  @media (min-width: 640px) {
+    .container-x {
+      padding-inline: 28px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container-x {
+      padding-inline: 48px;
+    }
+  }
+
+  /* Type scale: one display face, one text face */
+  .display-xl,
+  .display-lg,
+  .display-md,
+  .display-sm,
+  .display-hero {
+    font-family: var(--font-marcellus), serif;
+    font-weight: 400;
+    text-wrap: balance;
+  }
+  .display-hero {
+    font-size: clamp(3.1rem, min(7.2vw, 14svh), 8rem);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+  }
+  .display-xl {
+    font-size: clamp(2.75rem, 6.6vw, 6.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+  }
+  .display-lg {
+    font-size: clamp(2.25rem, 4.4vw, 4.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .display-md {
+    font-size: clamp(1.7rem, 2.9vw, 2.75rem);
+    line-height: 1.25;
+  }
+  .display-sm {
+    font-size: clamp(1.4rem, 1.8vw, 1.75rem);
+    line-height: 1.25;
+  }
+  .lead {
+    font-size: clamp(1.08rem, 1.25vw, 1.25rem);
+    line-height: 1.65;
+    text-wrap: pretty;
+  }
+  /* Small supporting text: field names, captions, breadcrumb */
+  .label {
+    font-size: 0.92rem;
+    line-height: 1.4;
+  }
+
+  /* Buttons read like an engraved plaque: a solid field with a fine inner line */
+  .btn {
+    position: relative;
+    display: inline-flex;
+    min-height: 3.5rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 2.25rem;
+    font-family: var(--font-marcellus), serif;
+    font-size: 1.08rem;
+    line-height: 1.2;
+    text-align: center;
+    transition:
+      background-color 0.4s,
+      color 0.4s,
+      border-color 0.4s;
+  }
+  .btn::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 1px solid currentColor;
+    opacity: 0.3;
+    pointer-events: none;
+    transition:
+      inset 0.4s var(--ease-out-expo),
+      opacity 0.4s;
+  }
+  .btn:hover::after {
+    inset: 7px;
+    opacity: 0.6;
+  }
+  .btn-wine {
+    background: var(--wine-700);
+    color: var(--pearl-50);
+  }
+  .btn-wine:hover {
+    background: var(--wine-600);
+  }
+  .btn-gold {
+    background: var(--gold-300);
+    color: var(--wine-900);
+  }
+  .btn-gold:hover {
+    background: #e7d0a6;
+  }
+  .btn-line {
+    border: 1px solid color-mix(in oklab, currentColor 45%, transparent);
+  }
+  .btn-line::after {
+    display: none;
+  }
+  .btn-line:hover {
+    border-color: currentColor;
+  }
+
+  /* Pointed arch. The sides stay straight; only the head curves. */
+  .arch {
+    clip-path: url(#arch-tall);
+  }
+  .arch-wide {
+    clip-path: url(#arch-wide);
+  }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s var(--ease-out-expo);
+  }
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 1px;
+    background-position: 0% 100%;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-/* Glow effects */
-.glow-green {
-  box-shadow: 0 0 25px rgba(16, 185, 129, 0.35);
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: clip;
 }
 
-.glow-purple {
-  box-shadow: 0 0 25px rgba(139, 92, 246, 0.35);
-}
-
-.glow-yellow {
-  box-shadow: 0 0 25px rgba(245, 158, 11, 0.35);
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0b0f17;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #232e42;
-  border-radius: 9999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #34425b;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
