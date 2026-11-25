@@ -44,8 +44,8 @@ export function SearchForm() {
       aria-label="Find a tour"
       className="relative z-5 text-ink-900 lg:absolute lg:inset-x-0 lg:bottom-8"
     >
-      <div className="mx-auto max-w-[1440px] lg:px-12">
-        <div className="grid bg-pearl-50 px-4 sm:grid-cols-3 sm:px-7 lg:grid-cols-[1fr_1fr_1fr_auto] lg:items-stretch lg:pr-5">
+      <div className="mx-auto max-w-[1360px] lg:px-8">
+        <div className="grid bg-pearl-50 shadow-[0_20px_50px_rgba(0,0,0,0.3)] rounded-2xl border border-border/80 px-4 sm:grid-cols-3 sm:px-7 lg:grid-cols-[1fr_1fr_1fr_auto] lg:items-stretch lg:pr-5 overflow-hidden">
           <div className="border-b border-border py-4 sm:border-b-0 sm:py-6 sm:pr-6">
             <FieldSelect label="Where" value={city} onChange={setCity} options={cityOptions} />
             <Stop />

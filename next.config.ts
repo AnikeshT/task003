@@ -20,8 +20,11 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     qualities: [75, 88],
     deviceSizes: [640, 828, 1080, 1440, 1920, 2560],
-    // Tour photos, served by the booking platform.
-    remotePatterns: [{ protocol: "https", hostname: "bokun.s3.amazonaws.com" }],
+    // Tour photos, served by the booking platform and Unsplash.
+    remotePatterns: [
+      { protocol: "https", hostname: "bokun.s3.amazonaws.com" },
+      { protocol: "https", hostname: "images.unsplash.com" },
+    ],
     minimumCacheTTL: 2678400,
   },
   async headers() {
@@ -34,13 +37,6 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/contact", destination: "/plan", permanent: false },
-      // One address for the whole site: the deployment's own domain forwards to ours.
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "uae-tours.vercel.app" }],
-        destination: "https://dunesandsky.com/:path*",
-        permanent: true,
-      },
     ]
   },
   turbopack: {

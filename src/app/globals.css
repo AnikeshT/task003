@@ -5,28 +5,28 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
-  Terroir & Cru Mediterranean & European Wine Design Tokens
-  Colours drawn from old-vine garnacha, volcanic Etna basalt,
-  Santorini limestone, Catalan cava gold, and French oak casks.
+  Terroir & Cru Bespoke Mediterranean Design Tokens
+  Inspired by ancient Tuscan cypress avenues, volcanic Etna basalt,
+  Penedès chalk cellars, and Blanc de Blancs Champagne.
 */
 :root {
   /* primitives */
-  --pearl-50: #faf7f2;
-  --pearl-100: #f3ece4;
-  --pearl-200: #e5dbcf;
-  --pearl-300: #cfbfad;
-  --ink-900: #1b1214;
-  --ink-700: #3d2d31;
-  --ink-500: #695459;
-  --wine-950: #180309;
-  --wine-900: #2a0712;
-  --wine-700: #520f21;
-  --wine-600: #6f172f;
-  --gold-300: #ecd79b;
-  --gold-500: #c59f48;
-  --gold-700: #886823;
-  --terracotta: #b65a39;
-  --aegean: #1d334a;
+  --pearl-50: #ffffff;
+  --pearl-100: #f5f2eb;
+  --pearl-200: #e8e3d8;
+  --pearl-300: #d4ccc0;
+  --ink-900: #121916;
+  --ink-700: #2c3a34;
+  --ink-500: #55675f;
+  --wine-950: #0d1411;
+  --wine-900: #18221d;
+  --wine-700: #24352d;
+  --wine-600: #732034;
+  --gold-300: #ebd39b;
+  --gold-500: #c59b43;
+  --gold-700: #8a6a24;
+  --terracotta: #c06c46;
+  --olive-800: #1e332a;
 
   /* semantic (shadcn contract) */
   --background: var(--pearl-100);

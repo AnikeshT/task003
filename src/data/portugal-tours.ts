@@ -22,9 +22,9 @@ export const PORTUGAL_TOURS: Tour[] = [
     pickup: "Private luxury chauffeur from any hotel or residence in Barcelona",
     languages: ["English", "Spanish", "Catalan", "French"],
     images: [
-      "https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1600&q=85",
+      "/images/barcelona-tapas.jpg",
+      "/images/barcelona-gothic.jpg",
+      "/images/barcelona-vineyard.jpg",
     ],
     summary:
       "An unforgettable gastronomic pilgrimage through Barcelona and the chalk terroirs of Penedès. Taste vintage Gran Reserva Cava directly from historic underground cellars, savor hand-carved Jamón Ibérico de Bellota in the Gothic Quarter, and feast on a 5-course chef-table pairing lunch.",
@@ -80,9 +80,9 @@ export const PORTUGAL_TOURS: Tour[] = [
     pickup: "Private pickup from any hotel, villa, or Fira cable car in Santorini",
     languages: ["English", "Greek", "German"],
     images: [
-      "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=85",
+      "/images/santorini-caldera.jpg",
+      "/images/santorini-dome.jpg",
+      "/images/santorini-wine.jpg",
     ],
     summary:
       "Uncover the volcanic soul of Santorini. Walk through 150-year-old un-grafted basket vines (kouloura) anchored in volcanic pumice, taste mineral Assyrtiko, Nyfteri, and amber Vinsanto across 3 celebrated cliffside wineries, capped by private caldera sunset dining.",
@@ -138,9 +138,9 @@ export const PORTUGAL_TOURS: Tour[] = [
     pickup: "Private chauffeured pickup in Taormina, Catania, or Etna wine resort",
     languages: ["English", "Italian", "German"],
     images: [
-      "https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=85",
+      "/images/sicily-etna.jpg",
+      "/images/sicily-terrace.jpg",
+      "/images/sicily-feast.jpg",
     ],
     summary:
       "Ascend the dramatic volcanic slopes of Mount Etna. Experience black volcanic basalt terraces, taste high-altitude Nerello Mascalese from 100-year-old pre-phylloxera vines, and enjoy a slow 4-course Sicilian country estate feast paired with Etna DOC crus.",
@@ -196,9 +196,9 @@ export const PORTUGAL_TOURS: Tour[] = [
     pickup: "Private hotel pickup in Porto or Peso da Régua",
     languages: ["English", "Portuguese", "French"],
     images: [
-      "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1600&q=85",
+      "/images/douro-terraces.jpg",
+      "/images/douro-cellar.jpg",
+      "/images/vineyard-harvest.jpg",
     ],
     summary:
       "Journey deep into the world's oldest demarcated wine region. Sail the river in a private wooden rabelo boat, stomp schist terraces at a private quinta, and taste 40-year aged vintage tawny ports alongside a 4-course vineyard lunch.",
@@ -219,7 +219,7 @@ export const PORTUGAL_TOURS: Tour[] = [
       "Certified WSET Level 3 English-speaking Sommelier guide",
       "All private cellar tasting fees and vintage reserve pours",
       "4-course traditional estate lunch with curated wine pairings",
-      "1-hour private river cruise with sparkling Vinho toast"
+      "1-hour private river cruise with sparkling toast"
     ],
     excluded: [
       "Personal bottle purchases from private quinta cellar",
@@ -254,9 +254,9 @@ export const PORTUGAL_TOURS: Tour[] = [
     pickup: "Meeting in central Ribeira, Porto",
     languages: ["English", "Portuguese", "Spanish"],
     images: [
-      "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=1600&q=85"
+      "/images/porto-river.jpg",
+      "/images/porto-cask.jpg",
+      "/images/cellar-tasting.jpg",
     ],
     summary:
       "Unlock centuries-old stone barrel vaults in Vila Nova de Gaia. Walk the iron ribs of the Dom Luís I bridge and savor hand-sliced presunto, bolinhos de bacalhau, and rare wood-aged Ports.",

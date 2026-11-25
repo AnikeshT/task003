@@ -65,9 +65,9 @@ export const cities: Record<
     tagline: "Historic chalk cava cellars, Catalan tapas & sea breeze",
     intro:
       "From the bustling Gothic Quarter wine bars to the undulating chalk soils of Penedès and steep slate llicorella terraces of Priorat, Catalonia is a world-class temple of oenology and gastronomy.",
-    image: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=1600&q=85",
+    image: "/images/barcelona-tapas.jpg",
     imageAlt: "Gourmet Catalan tapas and rich red wine in a Barcelona bodega",
-    secondary: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1600&q=85",
+    secondary: "/images/barcelona-gothic.jpg",
     facts: [
       { label: "Signature", value: "Artisanal Cava & Priorat DOCa" },
       { label: "From City", value: "45 min to vineyards" },
@@ -83,9 +83,9 @@ export const cities: Record<
     tagline: "Ancient volcanic caldera, basket vines & mineral Assyrtiko",
     intro:
       "Perched atop towering caldera cliffs above the Aegean Sea. Walk through 400-year-old ungrafted basket vines rooted in volcanic pumice, and taste crisp, bone-dry Assyrtiko alongside sun-dried Vinsanto.",
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1600&q=85",
+    image: "/images/santorini-caldera.jpg",
     imageAlt: "Santorini caldera cliffside village at sunset with Aegean sea view",
-    secondary: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1600&q=85",
+    secondary: "/images/santorini-dome.jpg",
     facts: [
       { label: "Terroir", value: "Volcanic Ash & Pumice" },
       { label: "Vine Style", value: "Ungrafted Kouloura Baskets" },
@@ -101,9 +101,9 @@ export const cities: Record<
     tagline: "Black volcanic basalt, ancient vines & Sicilian feasts",
     intro:
       "Europe's highest active volcano is home to one of the world's most thrilling wine revivals. High-altitude Nerello Mascalese from century-old pre-phylloxera vines paired with Sicilian cannoli, pistachios, and fresh seafood.",
-    image: "https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?auto=format&fit=crop&w=1600&q=85",
+    image: "/images/sicily-etna.jpg",
     imageAlt: "Mount Etna smoking volcanic peak and lush vineyard terraces in Sicily",
-    secondary: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1600&q=85",
+    secondary: "/images/sicily-terrace.jpg",
     facts: [
       { label: "Elevation", value: "Up to 1,000m on Etna" },
       { label: "Volcano", value: "Active basalt mineral soils" },
@@ -119,9 +119,9 @@ export const cities: Record<
     tagline: "Terraced schist hills & the golden river",
     intro:
       "The world's oldest demarcated wine region (1756). Dramatic hand-carved stone terraces plunging into the river Douro, centuries-old family Quintas, and the hallowed birthplace of Port wine.",
-    image: "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?auto=format&fit=crop&w=1600&q=85",
+    image: "/images/douro-terraces.jpg",
     imageAlt: "Terraced vineyards of the Douro Valley sloping down to the river",
-    secondary: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=85",
+    secondary: "/images/douro-cellar.jpg",
     facts: [
       { label: "Demarcated", value: "1756 (UNESCO)" },
       { label: "From Porto", value: "1 hr 30 min" },
@@ -137,9 +137,9 @@ export const cities: Record<
     tagline: "Centuries-old stone cellars & Atlantic petiscos",
     intro:
       "Granite lodges where Port wine matures in monumental oak vats. Walk the iron ribs of Dom Luís I bridge from colorful Ribeira, and taste fresh Matosinhos seafood alongside 20-year aged tawnies.",
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=1600&q=85",
+    image: "/images/porto-river.jpg",
     imageAlt: "Ribeira riverfront in Porto with classic rabelo boats and the iron bridge",
-    secondary: "https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=1600&q=85",
+    secondary: "/images/porto-cask.jpg",
     facts: [
       { label: "Best season", value: "All year" },
       { label: "Cellar lodges", value: "Over 50 historic" },
@@ -154,27 +154,27 @@ export const cities: Record<
 export const categories: Record<Category, { name: string; image: string; imageAlt: string }> = {
   "gourmet-pairing": {
     name: "Gourmet Tapas & Wine",
-    image: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=1600&q=85",
+    image: "/images/barcelona-tapas.jpg",
     imageAlt: "Gourmet tapas and vintage wine glasses in an atmospheric cellar",
   },
   "volcanic-terroir": {
     name: "Volcanic Terroir",
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1600&q=85",
+    image: "/images/santorini-caldera.jpg",
     imageAlt: "Caldera cliffside vineyard overlooking the Aegean sea",
   },
   "cellar-reserve": {
     name: "Cellar & Grand Cru",
-    image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=85",
+    image: "/images/cellar-tasting.jpg",
     imageAlt: "Oak barrel cellar with vintage reserve bottles being poured",
   },
   "harvest-masterclass": {
     name: "Harvest & Masterclass",
-    image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1600&q=85",
+    image: "/images/vineyard-harvest.jpg",
     imageAlt: "Grapes ripening on the vine during autumn harvest",
   },
   "vineyard-escape": {
     name: "Vineyard Estate Escape",
-    image: "https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?auto=format&fit=crop&w=1600&q=85",
+    image: "/images/sicily-etna.jpg",
     imageAlt: "Scenic rolling vineyard estate at the base of volcanic hills",
   },
 }
